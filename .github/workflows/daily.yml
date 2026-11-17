@@ -1,0 +1,45 @@
+name: Daily feed
+
+on:
+  schedule:
+    # 05:37 and 11:37 UTC. The second run is a retry: it has nothing left to do
+    # if the first one went through.
+    - cron: "37 5,11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: daily-feed
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/checkout@v7
+        with:
+          ref: data
+          path: data
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - run: python -m paperfeed
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Commit the feed
+        working-directory: data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Update feed"
+          git push origin HEAD:data
