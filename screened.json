@@ -1,0 +1,1304 @@
+{
+  "2611.21590": {
+    "date": "2026-11-17",
+    "title": "The Provenance-Privacy Paradox: Can Private Cloud Compute (PCC) Prove That Apple Reference Images Are Not Used for Learning?",
+    "reason": "Concerns photographic provenance and whether attested cloud workloads can retain or learn from raw images, which is outside the reader's network-traffic anomaly detection work and not a defensive practitioner topic.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.21579": {
+    "date": "2026-11-17",
+    "title": "ScenarioForge: Resource-Grounded Generation and Execution Validation of Cyber Exercises",
+    "reason": "Cyber-range and CTF scenario generation with LLMs is not about detecting attacks in traffic and is not a defensive practice a practitioner would act on.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.21577": {
+    "date": "2026-11-17",
+    "title": "When Tool Names Are Not Identities: Measuring Provider Misbinding in MCP-Based AI Agents",
+    "reason": "It studies attacker-controlled tool metadata misleading LLM agents, which is an attack on AI systems rather than network intrusion detection or evaluation methods the thesis could use.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.21548": {
+    "date": "2026-11-17",
+    "title": "TRACE: Topological Representations for Anomaly detection through Contrastive Embeddings",
+    "reason": "Benign-only, topology-aware anomaly detection for intrusion detection on graph-structured system activity is close to the thesis's unsupervised, topological-feature and evaluation themes, though it works on provenance graphs rather than network flows.",
+    "tier": "thesis",
+    "score": 6
+  },
+  "2611.21528": {
+    "date": "2026-11-17",
+    "title": "Post-Quantum Migration of Wi-Fi Key Establishment: A Hybrid ML-KEM Design for OWE and FILS, Validated on OWE with hostapd",
+    "reason": "Post-quantum cryptographic key establishment for Wi-Fi (OWE/FILS with ML-KEM) is cryptography protocol design, which falls under the skip tier, not intrusion detection or the reader's thesis topics.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.21497": {
+    "date": "2026-11-17",
+    "title": "The CYBER-BRIDGE project: An AI-Powered Platform for Cross-Border Cybersecurity, Compliance and Forensics in the EU",
+    "reason": "An EU project overview on cross-border CTI sharing, compliance and forensic evidence custody; defensive and relevant to SOC and forensics work, but not about traffic anomaly detection and has no results yet.",
+    "tier": "field",
+    "score": 3
+  },
+  "2611.21488": {
+    "date": "2026-11-17",
+    "title": "Detection-Efficient Watermarking for Vision--Language Agents via Risk-Constrained Strength Allocation",
+    "reason": "Semantic watermarking of vision-language model outputs for provenance is outside the thesis topics and not a practical defensive security tool for a practitioner.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.21480": {
+    "date": "2026-11-17",
+    "title": "RESILAGENT: A Three-Pillar Architecture for Cyber-Physical Resilience in Electrical Power and Energy Systems",
+    "reason": "A concept architecture for power-grid cyber-physical resilience with LLM agents and a blockchain anchor; defensive and somewhat practitioner-relevant but far from the thesis's traffic-level DoS detection.",
+    "tier": "field",
+    "score": 3
+  },
+  "2611.21456": {
+    "date": "2026-11-17",
+    "title": "Expertise capture in workplace AI",
+    "reason": "A governance and labor-policy framing of workplace AI knowledge capture, unrelated to network intrusion detection, DoS, dataset flaws, or detection evaluation, so it falls outside all thesis and field topics.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.21396": {
+    "date": "2026-11-17",
+    "title": "A counterexample to the soundness of the Flowering IOPP for codes on graphs",
+    "reason": "A cryptographic-proof soundness counterexample for Interactive Oracle Proofs of Proximity on codes on graphs; it is theory about proof systems, not network traffic anomaly detection, DoS, datasets, or defensive practice, so it falls under skip.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.21359": {
+    "date": "2026-11-17",
+    "title": "K-out-of-N Oblivious Transfer over Erasure Channels: Capacity and Reductions",
+    "reason": "Information-theoretic capacity of oblivious transfer over erasure channels is a cryptographic/privacy-theory result unrelated to network anomaly detection, DoS, datasets, or defensive ML, so it falls under skip.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.21331": {
+    "date": "2026-11-17",
+    "title": "TRIAGE-CPG: A Cross-Model Study of Budgeted Static Malware Triage with Large Language Models",
+    "reason": "LLM-driven static malware triage on decompiled binaries is outside the network-traffic thesis scope and uses an LLM as the detector, but it is useful defensive ML context for a practitioner.",
+    "tier": "field",
+    "score": 5
+  },
+  "2611.21222": {
+    "date": "2026-11-17",
+    "title": "Verifiable Random Sampling of Private Data Without a Trusted Single Party",
+    "reason": "A cryptographic protocol for verifiable random sampling of private datasets using a randomness beacon, which falls under the skip category for cryptography and is unrelated to network intrusion detection.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.21214": {
+    "date": "2026-11-17",
+    "title": "Taking Time Out of TOCTOU: From Race Reproduction to Security Discovery",
+    "reason": "Kernel and userspace TOCTOU race reproduction and regression oracles are outside the reader's network-traffic anomaly detection focus and involve no machine learning.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.21206": {
+    "date": "2026-11-17",
+    "title": "PQC Migration: End-to-End Performance Profiling of Post Quantum Cryptographic Algorithms in mTLS",
+    "reason": "Studies post-quantum TLS handshake performance, which is cryptography rather than intrusion detection, DoS, or defensive ML work.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.21145": {
+    "date": "2026-11-17",
+    "title": "Exposure and remediation in the French maritime sector: a passive measurement of 129 organisations",
+    "reason": "A passive attack-surface measurement of French maritime organisations with remediation tracking is useful defensive practice knowledge, but it is not about traffic anomaly detection or DoS, so it fits the field tier rather than the thesis.",
+    "tier": "field",
+    "score": 4
+  },
+  "2611.21088": {
+    "date": "2026-11-17",
+    "title": "AudioTrace: File-Level Membership Detection for Audio Large Language Models",
+    "reason": "Membership inference against audio LLMs is an attack on AI models and privacy, which the reader's skip tier explicitly covers, and it has no link to network traffic detection.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20861": {
+    "date": "2026-11-17",
+    "title": "Scenario-Based Risk Certificates for Multi-Property Vulnerability Discovery in Parametric MDPs",
+    "reason": "Formal verification of parametric MDPs with PAC guarantees is off-topic for network anomaly detection and is not a practitioner defensive-security topic.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20838": {
+    "date": "2026-11-17",
+    "title": "Optimal Dynamic Fees for L2s: A Vault Approach",
+    "reason": "Blockchain L2 fee pricing via control theory is unrelated to network intrusion detection, DoS, or security defense, so it falls outside every thesis and field criterion.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.20827": {
+    "date": "2026-11-17",
+    "title": "ProcReverser: Multi-Agent Black-Box Microarchitectural Reverse Engineering for Processor Vulnerability Analysis",
+    "reason": "Hardware microarchitecture reverse engineering for Spectre-class processor vulnerabilities is outside network traffic defense and the thesis scope, so it falls under hardware security skip.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20812": {
+    "date": "2026-11-17",
+    "title": "The Cybersecurity Dataset Observatory: Which Data for AI in Cybersecurity?",
+    "reason": "A catalog of public network-traffic datasets and benchmark pitfalls could be cited in the thesis's datasets and state-of-the-art sections.",
+    "tier": "thesis",
+    "score": 7
+  },
+  "2611.20782": {
+    "date": "2026-11-17",
+    "title": "Baryonic Keys and the Inheritance of Crypto-Assets: Revisiting the Tales From the Crypt Protocol",
+    "reason": "Blockchain-based crypto-asset inheritance with a physical key primitive is cryptography and blockchain work outside the thesis scope and not a practitioner defensive topic.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20765": {
+    "date": "2026-11-17",
+    "title": "STA: A Split Temporal Adversary Method for Evaluating Robustness of Multimodal RL-based Driving Policies",
+    "reason": "Adversarial attacks on RL driving policies via temporal misalignment concern robustness of autonomous driving policies, which is outside the reader's network-traffic detection scope and falls under attacks on AI models.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20699": {
+    "date": "2026-11-17",
+    "title": "A First Look at System One Decision Models for Malware Detection",
+    "reason": "Static malware detection on Windows PE files with LLM-based decision models is outside the thesis scope (network traffic, no LLM detector), but it is useful background for defensive ML work.",
+    "tier": "field",
+    "score": 4
+  },
+  "2611.20671": {
+    "date": "2026-11-17",
+    "title": "MASTA: A Feedback-Scheduled Multi-Agent System for End-to-End Tamarin Modeling and Analysis",
+    "reason": "Multi-agent LLM system for Tamarin formal protocol verification is outside the thesis scope of traffic anomaly detection and outside the defensive field topics.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20594": {
+    "date": "2026-11-17",
+    "title": "Experience: ENTRAP - An IaC Enterprise Cyber Range for Reproducible Security Assessment and Dataset Generation",
+    "reason": "An IaC cyber range that generates labeled attack datasets is useful background for a defensive practitioner, but it centers on ransomware and DHCP attacks with a supervised Random Forest rather than DoS detection or unsupervised methods.",
+    "tier": "field",
+    "score": 5
+  },
+  "2611.20583": {
+    "date": "2026-11-17",
+    "title": "State-Machine Governance of Adaptive Enforcement: Evidence from a Paired-Scenario Evaluation",
+    "reason": "Concerns governing AI-recommended security policy changes via state machines, which is SOC-automation and defensive-engineering work, but it does not address traffic anomaly detection or DoS, so it is field rather than thesis.",
+    "tier": "field",
+    "score": 4
+  },
+  "2611.20528": {
+    "date": "2026-11-17",
+    "title": "ReconPotBench: Evaluating LLM Honeypots in Multi-Round Linux Reconnaissance",
+    "reason": "Benchmarks LLM-driven honeypots for defensive deception, which is useful background for a practitioner but not directly about detecting DoS or evaluating anomaly detectors.",
+    "tier": "field",
+    "score": 4
+  },
+  "2611.20514": {
+    "date": "2026-11-17",
+    "title": "Beyond the Patch: Reconstructing an Incomplete-Fix Patch Bypass in LLM Agent Frameworks with Control-Gated, Benign Probes",
+    "reason": "Paper is about patch-bypass reconstruction in LLM agent frameworks (security invariant testing, vulnerability fixes), which falls under attacks on AI systems or purely vulnerability research rather than network traffic anomaly detection, so it should be skipped.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20498": {
+    "date": "2026-11-17",
+    "title": "Replay-Augmented Regularisation for Class-Incremental Network Intrusion Detection: A Three-Dataset Evaluation of EWC and LwF",
+    "reason": "Network intrusion detection on public datasets (CIC-IDS2017, UNSW-NB15, ToN-IoT) with evaluation pitfalls such as tuning leakage, single seed and a misleading forgetting metric, which the thesis could cite, though the detector is supervised CNN rather than one-class.",
+    "tier": "thesis",
+    "score": 6
+  },
+  "2611.20470": {
+    "date": "2026-11-17",
+    "title": "Beyond Semantic Prompts: Unified Watermarking and Access Control for Text-to-Image Diffusion Models",
+    "reason": "Watermarking and access control for text-to-image diffusion models is an AI-generation topic unrelated to network intrusion detection, DoS detection, or defensive traffic analysis, so it falls under skip.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.20459": {
+    "date": "2026-11-17",
+    "title": "Designing Deceptive Model Organisms that Successfully Evade Auditing",
+    "reason": "Paper on AI sandbagging model organisms and auditing evasion falls under AI safety/deception, which is explicitly in the skip tier.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20454": {
+    "date": "2026-11-17",
+    "title": "KVMARK: Fragile Watermarking for KV-Cache Integrity in Latent Multi-Agent Systems",
+    "reason": "Watermarking KV-cache tensors for integrity in latent multi-agent LLM pipelines is about AI-internal representations, not network traffic anomaly detection, DoS, datasets, or evaluation of detectors.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20453": {
+    "date": "2026-11-17",
+    "title": "Taint Analysis via Heap-Aware Propagation",
+    "reason": "Static taint analysis and pointer analysis for C/LLVM IR is program analysis, outside the network traffic anomaly detection thesis and not a defensive ML topic for practitioners.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20389": {
+    "date": "2026-11-17",
+    "title": "Where the Evidence Lives: Measuring Privacy and Diagnosability of Exported AI-Agent Traces",
+    "reason": "Focuses on privacy-preserving export of AI-agent debugging traces and repair benchmarks, which falls under privacy work rather than network intrusion detection or defensive practice.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20298": {
+    "date": "2026-11-17",
+    "title": "Type-Confusion Security",
+    "reason": "Formal type-system security for untrusted code in smart contracts and tool ecosystems; unrelated to network intrusion detection, DoS, or the thesis evaluation topics, and not a practitioner defensive topic.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20291": {
+    "date": "2026-11-17",
+    "title": "Where the Savings Go: The Limits of Hiding Cross-Tenant Cache Hits in LLM Serving",
+    "reason": "Studies timing side channels and privacy leakage in LLM serving caches, which falls outside the thesis's network-traffic anomaly detection scope and outside practitioner defense topics.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20277": {
+    "date": "2026-11-17",
+    "title": "A Bleichenbacher bit-by-bit oracle attack from partial message knowledge",
+    "reason": "Cryptanalysis of RSA PKCS#1 v1.5 padding oracles is cryptography and purely offensive work, outside the thesis scope and not a practitioner detection topic.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.20223": {
+    "date": "2026-11-17",
+    "title": "Understanding Users' Security, Privacy, and Trust Concerns in Healthcare AI Systems",
+    "reason": "A Reddit-based qualitative study of user attitudes toward healthcare AI privacy and trust is outside network intrusion detection and evaluation, and gives a defensive ML practitioner little to act on.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20187": {
+    "date": "2026-11-17",
+    "title": "Cyber-Secure Wearable, Ultra-Low-Power Networked Sensors for Soldier Health Monitoring: Insights from the CAPSARII project",
+    "reason": "A military wearable health-monitoring and IoBT platform paper, outside network intrusion detection, DoS detection, and evaluation of anomaly detectors, so it doesn't fit the thesis or field tiers.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20144": {
+    "date": "2026-11-17",
+    "title": "HEAMS: Holistic Evaluation of Agent Memory Systems",
+    "reason": "Agent memory evaluation with privacy and poisoning risks is about AI agents and security governance, not network intrusion detection, so it falls outside the thesis scope and is not a practitioner-facing defensive topic.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20115": {
+    "date": "2026-11-17",
+    "title": "Sequential Semantic-Non-Semantic Watermarking: Robustness Against UnMarker Attacks",
+    "reason": "Image watermarking and watermark-removal attacks on generated content fall outside network traffic, intrusion detection, and the defensive practice areas listed for the field tier.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.20045": {
+    "date": "2026-11-17",
+    "title": "Security of Deep Research Agents: Attack Surface, Defenses, Benchmarks, and Agenda Seeding against Research Planning",
+    "reason": "Studies security attacks and defenses on LLM research agents (prompt injection, RAG poisoning, GEO), which falls under the skip category for attacks on AI models.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.19915": {
+    "date": "2026-11-17",
+    "title": "CHERI under Fault Injection: An Emulation-Based Security Evaluation of Capability Hardware Enhanced RISC Instructions",
+    "reason": "Fault-injection attacks on CHERI hardware fall under hardware security and offensive work, which the reader's tiers place in skip.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.19886": {
+    "date": "2026-11-17",
+    "title": "Recovery Gone Too Far: Understanding and Repairing Risky Fallback in LLM Agents",
+    "reason": "Studies risky tool fallback in LLM agents and a repair method, which is AI agent safety rather than network intrusion detection or defensive practice the thesis or field tiers cover.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.19868": {
+    "date": "2026-11-17",
+    "title": "HalluProbe: Exploiting VLM Hallucinations for Backdoor Detection",
+    "reason": "Backdoor detection in vision-language models is an AI-model security topic outside the reader's network-traffic thesis and defensive-ML field scope.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.19864": {
+    "date": "2026-11-17",
+    "title": "Local Order Matters: A Lightweight CPU-Trainable CNN for Website Fingerprinting on Defended Tor Traffic",
+    "reason": "Website fingerprinting on Tor is traffic analysis of encrypted flows, not DoS detection, so it falls outside the thesis scope; it is a measurement-style attack study that a defensive practitioner may find worth knowing about, but its direct relevance to the reader's slow-DoS detection work is weak.",
+    "tier": "field",
+    "score": 3
+  },
+  "2611.19826": {
+    "date": "2026-11-17",
+    "title": "Where Is Rank-1 DiM Refusal Intervenable in Multimodal LM Derivatives?",
+    "reason": "Studies activation-level refusal interventions and jailbreak-style attack success in multimodal LMs, which falls under the skip tier for AI safety and attacks on AI models.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.19774": {
+    "date": "2026-11-17",
+    "title": "When Backdoors Can Be Switched Off: Suppression-Aware Backdoor Attacks on Vision-Language-Action Models",
+    "reason": "Backdoor attack on robot VLA models is an attack on AI models, which the skip tier explicitly excludes, despite mentioning Isolation Forest detection.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.19764": {
+    "date": "2026-11-17",
+    "title": "Compositional Exploits in Autonomous Coding Agents: Attack Mechanics and Ephemeral Defense",
+    "reason": "Its focus is attacks on LLM coding agents and their tool chaining, an AI-safety topic outside the reader's network-traffic detection thesis and not a practitioner detection or SOC paper.",
+    "tier": "skip",
+    "score": 3
+  },
+  "2611.19719": {
+    "date": "2026-11-17",
+    "title": "Found, but Not Fixed : From Software Vulnerability Discovery to Fixes with Iterative LLM Pipelines",
+    "reason": "Automated LLM-based source code repair of vulnerable functions is outside the reader's network traffic anomaly detection thesis and not a field topic like SOC or network defense.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.19680": {
+    "date": "2026-11-17",
+    "title": "Attacker Diversity Reduction in Adaptive LLM Red Teaming",
+    "reason": "LLM red-teaming with RL-trained jailbreak attackers falls under AI safety and attacks on AI models, which the reader's skip tier covers, and it has no link to network traffic anomaly detection.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.19598": {
+    "date": "2026-11-17",
+    "title": "Protecting the System, Stranding the User: The Limits of Multi-Agent Authorization",
+    "reason": "Concerns authorization architectures for multi-agent LLM systems and user intent, which fall under AI agent safety rather than network anomaly detection, defensive tooling, or evaluation of detectors.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.19577": {
+    "date": "2026-11-17",
+    "title": "ElevatorII: High-Performance Fully-Static Cross-ISA Binary Translation",
+    "reason": "Static cross-ISA binary translation is a systems and compiler topic with no link to network anomaly detection, IDS evaluation, or defensive ML work.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.19551": {
+    "date": "2026-11-17",
+    "title": "TrustBound: Mechanized Completeness for Payment Epochs Initiated by AI Agents",
+    "reason": "Formal verification of AI-agent payment accounting in Lean is unrelated to network traffic anomaly detection, DoS detection, or the reader's defensive ML work.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.19536": {
+    "date": "2026-11-17",
+    "title": "Agent Authenticator: Passkey-Grade, Hardware-Bound Authentication for AI Agents",
+    "reason": "Proposes an authentication and credential-binding design for AI agents, which is cryptographic identity work rather than network traffic detection, evaluation, or LLM-based alert explanation.",
+    "tier": "skip",
+    "score": 3
+  },
+  "2611.19465": {
+    "date": "2026-11-17",
+    "title": "VAST: Compiling Grounded Vulnerability Scenarios into Verifiable, Multi-Step Environments for Evaluating LLM Red-Team Agents",
+    "reason": "Benchmarks LLM red-team agents solving exploit workflows, which is offensive work rather than defensive detection, so it falls under skip.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.19435": {
+    "date": "2026-11-17",
+    "title": "Security Authentication as Protective Friction: Understanding the Dual Effects of Authentication Measures in e-Government Platform",
+    "reason": "An IS study on user experience of authentication friction in e-government; not about network intrusion detection, DoS, datasets, or detector evaluation, so it falls outside the thesis and is not a practitioner-facing defensive topic.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.19427": {
+    "date": "2026-11-17",
+    "title": "Memorization Lives in a Few Attention Heads: Mitigating Memorization in Diffusion Models via Projection-Based Suppression",
+    "reason": "Studies memorization mitigation in diffusion image models, which falls under AI model privacy and safety rather than network intrusion detection or evaluation methods the thesis could use.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.19333": {
+    "date": "2026-11-17",
+    "title": "Orbit AI: Evaluating Tool-Augmented Agents For Enterprise Question Answering",
+    "reason": "Enterprise workspace question answering with LLM agents is unrelated to network intrusion detection, DoS, or defensive security work, so it falls outside both the thesis and field tiers.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.19305": {
+    "date": "2026-11-17",
+    "title": "Fundamental Limits of Statistical Watermarking for LLMs with Fixed and Optimizable Common Randomness",
+    "reason": "LLM text watermarking theory is outside network traffic anomaly detection and outside the thesis and field topics, so it is a skip.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.19295": {
+    "date": "2026-11-17",
+    "title": "Optional Traps: An Empirical Study of LLM Agents Against Credential Deception and Alert-Driven Revocation",
+    "reason": "Defensive deception and alert-driven revocation against LLM attackers is practitioner-relevant SOC and web-defense work, but it is not traffic anomaly detection or DoS detection, so it fits field rather than thesis.",
+    "tier": "field",
+    "score": 5
+  },
+  "2611.19216": {
+    "date": "2026-11-17",
+    "title": "Operating-Point Failure of Frozen Guardrail Probes Under Backbone Updates",
+    "reason": "Studies LLM guardrail probes for harmful prompts and threshold drift under model updates, which falls under AI safety rather than network traffic anomaly detection, though its threshold-calibration lessons touch evaluation pitfalls.",
+    "tier": "skip",
+    "score": 3
+  },
+  "2611.19109": {
+    "date": "2026-11-17",
+    "title": "ST-GAT: A Leakage-Free Spatio-Temporal Graph Attention Framework for Robust Network Intrusion Detection",
+    "reason": "Covers intrusion detection on network flows and the leakage and preprocessing-contamination pitfalls in benchmark evaluation, which the thesis methodology could cite, though it is supervised deep learning.",
+    "tier": "thesis",
+    "score": 6
+  },
+  "2611.19090": {
+    "date": "2026-11-17",
+    "title": "When the Spec Sheet Lies: Injection Attacks on LLM-Generated Compliance Artifacts",
+    "reason": "Prompt injection attacks on LLM-generated industrial documents are an attack on AI models, which the reader's skip tier excludes.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.18999": {
+    "date": "2026-11-17",
+    "title": "Agent-ZTA: A chain-Aware Zero Trust Model for Bidirectional Security-State Propagation and Runtime Containment in Multi-Agent Delegation",
+    "reason": "An authorization and containment model for multi-agent delegation chains; it is not network traffic detection, DoS, anomaly detection, datasets, or evaluation, and it falls outside the reader's defensive ML focus.",
+    "tier": "skip",
+    "score": 3
+  },
+  "2611.18925": {
+    "date": "2026-11-17",
+    "title": "Privacy-Preserving Clustering Algorithm and Parameter Selection for Collaborative Population Stratification Using Distributed PCA",
+    "reason": "Privacy-preserving clustering for genomic population stratification with LDP and distributed PCA is unrelated to network intrusion detection, DoS, or the reader's defensive ML focus, so it falls outside every tier.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.18910": {
+    "date": "2026-11-17",
+    "title": "Memory Safety Isn't All You Need: Code Reuse Attacks in Memory Safe Languages",
+    "reason": "Formal taxonomy of code-reuse attacks in memory-safe languages (prototype pollution, DOM clobbering), outside the reader's network-traffic anomaly detection and ML focus.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.18909": {
+    "date": "2026-11-17",
+    "title": "Quantifying Membership Inference Risks in Genomic Data Sharing: The Role of Attacker's Auxiliary Information",
+    "reason": "Membership inference privacy risk in genomic data sharing with local differential privacy is outside the reader's network-intrusion focus and falls under the skip list's privacy theory.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.18895": {
+    "date": "2026-11-17",
+    "title": "Lasso: Towards Sustainable AI-Generated Media Detection with Intel QAT On-Chip Compression",
+    "reason": "Detects AI-generated media using Intel QAT compression hardware, which is outside network intrusion detection, DoS, and the thesis's evaluation topics.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.18887": {
+    "date": "2026-11-17",
+    "title": "We Have All the Cards: Securing Agent Cards at the Operational Trust Boundary of the Agent2Agent Protocol",
+    "reason": "Concerns securing AI agent metadata against natural-language manipulation (prompt-injection-like attacks on LLM judges), which falls under the skip scope for attacks on AI models rather than network traffic anomaly detection.",
+    "tier": "skip",
+    "score": 3
+  },
+  "2611.18874": {
+    "date": "2026-11-17",
+    "title": "Stargate: Security Analysis and Mission-Aware Firewall for the CubeSat Space Protocol",
+    "reason": "Satellite protocol firewall for CubeSat CSP; not network intrusion detection, DoS, datasets, or evaluation of anomaly detectors, and not a practitioner-relevant defensive topic for this reader, so skip.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.18857": {
+    "date": "2026-11-17",
+    "title": "A Quasipolynomial Quantum Algorithm for the Vector Dihedral Coset Problem with Smooth Modulus",
+    "reason": "Quantum cryptanalysis of the dihedral coset problem relating to LWE, which is cryptographic theory outside network defense and not citable for the thesis.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.18563": {
+    "date": "2026-11-17",
+    "title": "Pairing AIS with RF: Analysis of a Markovian Approach for Maritime Data Fusion",
+    "reason": "Maritime AIS/RF vessel-track fusion with a Pair HMM is outside network intrusion detection and outside the defensive-security practice areas listed for the field tier.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.18463": {
+    "date": "2026-11-17",
+    "title": "VellSSLH: Sound Type-Guided Selective Speculative Load Hardening for LLVM IR",
+    "reason": "Compiler-level Spectre hardening and constant-time cryptography verification fall outside the thesis topics and the defensive ML/SOC field, so it is skipped.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.18449": {
+    "date": "2026-11-17",
+    "title": "Deterministic ECDSA on secp256k1: the RFC 6979 assumption, a counterexample, and the state of deployed implementations",
+    "reason": "Cryptographic theory of ECDSA nonce derivation and PRF assumptions, which the reader's skip tier explicitly excludes, despite the implementation audit.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.18442": {
+    "date": "2026-11-17",
+    "title": "CANTraj: Recovering Vehicle Trajectories from CAN Signals in Naturalistic Driving",
+    "reason": "Privacy route-inference attack on vehicle CAN data, which is offensive and privacy-focused rather than network intrusion detection or DoS work.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.18363": {
+    "date": "2026-11-17",
+    "title": "Adaptable Watermarking: Transforming Image Watermarking Models via Lightweight Adapters",
+    "reason": "Neural image watermarking with lightweight adapters is unrelated to network traffic anomaly detection, DoS detection, or security of network traffic, so it falls outside the reader's thesis and defensive ML interests.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.18358": {
+    "date": "2026-11-17",
+    "title": "Quadratic APN Functions of $\\mathbb{F}_2^{10}$ with a Self-Equivalence of Prime Order",
+    "reason": "Pure mathematics on classifying quadratic APN functions over F_2^10; cryptographic S-box theory with no network traffic, detection, or defensive ML relevance to the reader.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.18355": {
+    "date": "2026-11-17",
+    "title": "Information-Theoretic Threshold Designated-Verifier Digital Signatures for Resource-Constrained Devices",
+    "reason": "Information-theoretic threshold designated-verifier signatures for constrained devices are cryptography, which the skip tier explicitly excludes.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.18312": {
+    "date": "2026-11-17",
+    "title": "On the Same Track: Privacy Leaks in Electric Rail Transport via Magnetic Fields",
+    "reason": "Smartphone magnetometer privacy attack on train passengers; it is mobile-sensor privacy research, outside network intrusion detection and not useful to a practitioner in defensive security.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.18293": {
+    "date": "2026-11-17",
+    "title": "PrivacyPR: A Dataset of Real-World Privacy Fixes for Benchmarking Privacy-Aware Code Review",
+    "reason": "Privacy-aware code review with coding agents on GitHub PRs is software engineering and privacy compliance, not network traffic, intrusion detection, or DoS work, so it falls outside the reader's thesis and defensive focus.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.18272": {
+    "date": "2026-11-17",
+    "title": "From Bytes to Behavior: Request-Level Attribution from Live GPU Hidden States",
+    "reason": "Digital forensics of live GPU memory for LLM inference, using linear probes for refusal detection, is far from the thesis's network-traffic DoS work and is mainly interpretability/AI-safety, so it falls outside the field scope.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.18133": {
+    "date": "2026-11-17",
+    "title": "Forget the Lineage: Forward-Secure, Lineage-Complete Cryptographic Erasure for LLM-Agent Memory",
+    "reason": "Cryptographic erasure for LLM-agent memory is cryptography and privacy work, which the reader's thesis and defensive focus exclude.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.18126": {
+    "date": "2026-11-17",
+    "title": "Hello Again: Exploiting Replay Protected Monotonic Counters to Brute-Force Windows Hello PINs",
+    "reason": "Hardware security attack on TPM and flash rollback protection for Windows Hello PINs, outside network anomaly detection and not a practitioner defense topic for this reader.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.18055": {
+    "date": "2026-11-17",
+    "title": "DeCompCert: A Verified Decompiler for CompCert-Generated AArch64",
+    "reason": "A verified decompiler for CompCert AArch64 output is a binary-analysis and reverse-engineering paper outside the reader's network-traffic and DoS detection focus, and it is not a defensive ML or SOC practitioner topic.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.18027": {
+    "date": "2026-11-17",
+    "title": "Beyond Bot Labels: Retrospective Consequence-Grounded Ranking of Attributed Cache Harm in E-Commerce Logs",
+    "reason": "Studies cache hit ratio harm from automated shopping sessions in e-commerce, a performance and caching problem rather than intrusion, DoS, or traffic anomaly detection a practitioner would need.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17918": {
+    "date": "2026-11-17",
+    "title": "Condensing Law of Security Information",
+    "reason": "Theoretical claim about LLM model size and security information retention; it does not address network traffic anomaly detection, DoS detection, evaluation, or LLMs that explain alerts or write rules.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17907": {
+    "date": "2026-11-17",
+    "title": "Game-Theoretic Analysis of RIS-Assisted Challenge-Response PLA - Part II: Partial Channel Knowledge",
+    "reason": "Physical layer authentication with RIS and game-theoretic attack-defense analysis is wireless/5G optimization and not related to network intrusion detection, so it falls under skip.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.17887": {
+    "date": "2026-11-17",
+    "title": "RuralShield: Super Intelligence-Assisted Security Triage and Serverless Infrastructure for Resource-Constrained Healthcare",
+    "reason": "Covers SOC-style triage with LLM assessments and human-approved containment, which is practitioner-relevant but not about traffic anomaly detection or evaluation methods the thesis could cite.",
+    "tier": "field",
+    "score": 4
+  },
+  "2611.17883": {
+    "date": "2026-11-17",
+    "title": "Securing Multi-Agent Systems by Design",
+    "reason": "Studies attacks on LLM multi-agent systems and a defense for them, which falls under attacks on AI models rather than network traffic or defensive detection work.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17818": {
+    "date": "2026-11-17",
+    "title": "LLMs are Vulnerable to Malicious Requests with Indistinguishable Intent",
+    "reason": "This paper is about jailbreak attacks on LLM safety filters, which the reader's skip tier explicitly excludes as attacks on AI models and AI safety.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.17761": {
+    "date": "2026-11-17",
+    "title": "Inferring Sensitive Events in Multi-Mode Cyber-Physical Systems via Scheduling Side Channels",
+    "reason": "A timing side-channel attack on multi-mode cyber-physical scheduling; it is off-topic for the thesis's network-traffic anomaly detection and is not something a defensive ML practitioner would need.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17747": {
+    "date": "2026-11-17",
+    "title": "Evaluating the Robustness of PRNU Source-Camera Attribution to the Fingerprint-Copy Attack: An Open Toolkit with Triangle-Test Detection",
+    "reason": "Image-forensics work on PRNU camera attribution and forgery; it is digital forensics but off the network-traffic thesis topic, with only a loose methodological link to threshold calibration.",
+    "tier": "field",
+    "score": 3
+  },
+  "2611.17703": {
+    "date": "2026-11-17",
+    "title": "iGRAIL: Blockchain-Based Generative Federated Learning for Trustworthy Healthcare Intelligence",
+    "reason": "Blockchain-based federated learning for healthcare data privacy is unrelated to network intrusion detection, DoS, or traffic anomaly detection, and falls under the skip list's federated learning and privacy theme.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.17684": {
+    "date": "2026-11-17",
+    "title": "Representational Geometry as a Diagnostic for Adversarial Robustness",
+    "reason": "Studies adversarial robustness of MNIST MLPs through latent geometry, which is about attacks on AI models rather than network traffic or intrusion detection.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17646": {
+    "date": "2026-11-17",
+    "title": "Binarization as an Attack Surface in Weightless Neural Networks",
+    "reason": "Adversarial evasion of supervised weightless neural network IDS classifiers is mainly AI-model robustness work, not the unsupervised anomaly detection the thesis uses, but a practitioner should know these detectors can be evaded.",
+    "tier": "field",
+    "score": 4
+  },
+  "2611.18789": {
+    "date": "2026-11-17",
+    "title": "Personalized and Adaptive Federated Learning for Canine Cardiomegaly Keypoint Prediction",
+    "reason": "Federated learning for canine X-ray keypoint prediction is medical imaging on a different task, outside the reader's network-traffic anomaly detection thesis and not a defensive security topic.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.17596": {
+    "date": "2026-11-17",
+    "title": "Tractable Importance Sampling for Monte Carlo Privacy Accounting",
+    "reason": "Concerns differential privacy accounting via Monte Carlo importance sampling, which is outside the reader's anomaly detection and defensive security scope and falls under privacy theory to skip.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.17577": {
+    "date": "2026-11-17",
+    "title": "Fair and Efficient Distributed EV Charging Coordination Using Threshold Cryptography and Machine Learning",
+    "reason": "EV charging coordination with ADMM, Byzantine attacks and threshold cryptography is off-topic for network intrusion or DoS detection, so it is skipped.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.17554": {
+    "date": "2026-11-17",
+    "title": "Online Allocation with Differential Privacy",
+    "reason": "Differential privacy for online resource allocation is a theory-heavy paper on privacy-preserving decision making, outside the reader's network anomaly detection, DoS, dataset, or evaluation topics and not a defensive practitioner subject.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17534": {
+    "date": "2026-11-17",
+    "title": "I2C-GRPO: Insight Importance Checklist for Reinforcement Learning in a Multi-Agent DDoS Alert Triage Workflow",
+    "reason": "It studies an LLM agent that triages DDoS alerts on network data, which bears on the thesis's possible LLM alert-explanation extension, though its core is RL reward design rather than detection.",
+    "tier": "thesis",
+    "score": 6
+  },
+  "2611.17123": {
+    "date": "2026-11-17",
+    "title": "Preserve the Vulnerability, Break the Alert: Testing the Robustness of CodeQL Taint Tracking with Natural Rewrites",
+    "reason": "Tests robustness of CodeQL's static taint tracking to LLM-generated rewrites; relevant to defensive detection evaluation and practitioner awareness, but not network traffic or anomaly detection for the thesis.",
+    "tier": "field",
+    "score": 5
+  },
+  "2611.17115": {
+    "date": "2026-11-17",
+    "title": "CapLite: Prompt-Injection Defense for Small Language Model Agents without Model-Written Security Artifacts",
+    "reason": "Prompt-injection defense for LLM agents falls under AI safety and attacks on AI models, which the reader's skip tier explicitly excludes.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17102": {
+    "date": "2026-11-17",
+    "title": "On cryptographically non-linear all-or-nothing transforms",
+    "reason": "Pure combinatorial cryptography on all-or-nothing transforms, unrelated to network traffic, intrusion detection, or defensive security work.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.17094": {
+    "date": "2026-11-17",
+    "title": "GRID-MRI: Resilience Assessment of Power Systems under Coordinated Cyber-Physical Attacks",
+    "reason": "A grid resilience index for power systems under coordinated cyber-physical attacks, with no network traffic anomaly detection, DoS detection, or evaluation methodology relevant to the thesis.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17091": {
+    "date": "2026-11-17",
+    "title": "Optimal Single-History Tokenization Disambiguation for Provably Secure Linguistic Steganography",
+    "reason": "Linguistic steganography and tokenization coding are outside the reader's network-defense scope and are not covered by any tier.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.17395": {
+    "date": "2026-11-17",
+    "title": "Can LLMs Write Backdoors? An Empirical Security Study of Weight-Space Programming",
+    "reason": "Studies LLM-driven backdoor injection into neural network weights, which is an attack on AI models and falls under the excluded backdoor category, not network defense.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17065": {
+    "date": "2026-11-17",
+    "title": "NonSense: On the (In)security of FPGA Anti-tamper Sensors",
+    "reason": "Hardware fault-injection attacks on FPGA anti-tamper sensors fall under the skip tier's hardware security and offensive work, outside the network anomaly detection scope.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17042": {
+    "date": "2026-11-17",
+    "title": "Infrastructure for Verifiable AI: Where Proof Costs Go and How Hardware Can Help",
+    "reason": "Zero-knowledge proof cost and hardware acceleration for verifiable neural-network inference is cryptography and hardware work, outside network intrusion detection and not a practitioner defense topic.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17035": {
+    "date": "2026-11-17",
+    "title": "Prevalence Bounds for Edited Watermarked Text: Power Envelopes and Calibration Sensitivity",
+    "reason": "Studies statistical prevalence bounds for LLM text watermarks, which is outside the reader's network-traffic anomaly detection focus and outside the defensive-practitioner field scope.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17012": {
+    "date": "2026-11-17",
+    "title": "Anonymous in Name Only: A Critical Review and a Reidentification Exercise on the European Commission's Anonymization Measures for Google Search Data under Article 6(11) of the DMA",
+    "reason": "A privacy and regulatory anonymization paper on DMA search-data sharing, which falls under the skip category for privacy topics rather than network intrusion detection.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17003": {
+    "date": "2026-11-17",
+    "title": "Maturity$^2$: Assessing the Maturity of Crypto Agility Maturity Models",
+    "reason": "Evaluates crypto agility maturity models for post-quantum migration, which is governance and cryptography rather than traffic anomaly detection, DoS work, or detection engineering.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.16928": {
+    "date": "2026-11-17",
+    "title": "STEALTH: Steganographic Text Encoding Agnostic to Low-Level Tensor Hardware",
+    "reason": "Linguistic steganography with LLM sampling is cryptography and covert communication, outside the reader's network-traffic detection and evaluation topics and not useful for defensive field work.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.16922": {
+    "date": "2026-11-17",
+    "title": "Batch, Pack, and Prove: More Efficient Verifiable Computation for CKKS",
+    "reason": "This is cryptography (verifiable computation for CKKS homomorphic encryption), which falls under the explicitly excluded cryptography category.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.16890": {
+    "date": "2026-11-17",
+    "title": "Look It Up: Multi-bit LLM Watermarking via Codebook Search",
+    "reason": "LLM text watermarking for source attribution is outside the reader's network-traffic anomaly detection and evaluation focus, and falls under the excluded watermarking topic, so it is skipped.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17393": {
+    "date": "2026-11-17",
+    "title": "Evolutionary-based Transfer Learning for Physical Attack on End-to-End Autoencoder Communications",
+    "reason": "Physical adversarial attacks on wireless autoencoder communication systems fall under wireless/offensive work and attacks on AI models, which the reader should skip.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.16818": {
+    "date": "2026-11-17",
+    "title": "Signed Dyadic Path Encoding for Efficient Non-Interactive Private Decision Tree Evaluation over TFHE",
+    "reason": "Cryptographic private decision-tree evaluation over TFHE is outside the reader's anomaly-detection thesis scope and is cryptography, which is explicitly skip.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.16693": {
+    "date": "2026-11-17",
+    "title": "MobileProbe: Adaptive Security Evaluation of Mobile Agents via Trajectory-Aware Injection",
+    "reason": "Red-teaming of prompt-style injection against mobile GUI agents is an attack on AI models, which falls under the skip criteria.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.16588": {
+    "date": "2026-11-17",
+    "title": "CrossPloit: A Benchmark for Cross-Version PoC Migration in Python Web Applications",
+    "reason": "Benchmark of LLM agents migrating exploit PoCs to unlisted vulnerable versions; it touches defensive vulnerability-database auditing but is mainly exploit-generation work outside the thesis scope.",
+    "tier": "field",
+    "score": 3
+  },
+  "2611.16565": {
+    "date": "2026-11-17",
+    "title": "Look Here, Then Decide: Small Decision Models in a Harness Find Memory-Safety Vulnerabilities at Scale on Commodity GPUs",
+    "reason": "Source-code vulnerability hunting with a small decision model is outside the thesis's network-traffic detection scope and reads as offensive bug discovery rather than defensive practice.",
+    "tier": "skip",
+    "score": 3
+  },
+  "2611.16557": {
+    "date": "2026-11-17",
+    "title": "Game-Theoretic Analysis of RIS-Assisted Challenge-Response PLA - Part I: Perfect Channel Knowledge",
+    "reason": "Game-theoretic physical-layer authentication with RIS precoding is wireless security theory, outside the thesis scope of network traffic anomaly detection and outside practitioner defensive work.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.16516": {
+    "date": "2026-11-17",
+    "title": "Authenticated Approximate Nearest Neighbor Search in Outsourced Vector Databases",
+    "reason": "Cryptographic authentication of outsourced vector search (vector commitments, Inner Product Arguments) is cryptography, outside the reader's network-defense scope.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.16496": {
+    "date": "2026-11-17",
+    "title": "How to Defeat a Mafia (of Size 1)",
+    "reason": "Game-theoretic analysis of the social deduction game Mafia has no connection to network traffic, intrusion detection, or defensive security work, so it falls outside both the thesis and field tiers.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.16495": {
+    "date": "2026-11-17",
+    "title": "Verifiable Settlement and Pricing for Local Energy Markets: Architecture and Deployment on Hyperledger Besu",
+    "reason": "Blockchain-based energy market settlement with zero-knowledge proofs is outside the reader's network-security detection focus and not a defensive practitioner topic.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.16372": {
+    "date": "2026-11-17",
+    "title": "No Convergence in Learned Eavesdropping-Detection Dynamics for BB84 Quantum Key Distribution",
+    "reason": "Quantum key distribution eavesdropping-detection with tabular RL games is outside the reader's network-intrusion and DoS focus and not a defensive ML tool for traffic, so it falls under skip.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.16369": {
+    "date": "2026-11-17",
+    "title": "Bait: Mitigating Harmful Agentic Reinforcement Learning via Probing Reward Function",
+    "reason": "This is AI safety work on harmful agentic RL against LLMs, which falls under the skipped category of attacks on AI models and AI safety rather than network intrusion detection.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.16368": {
+    "date": "2026-11-17",
+    "title": "ReliaGuard: Reconstruction-Aware Watermarking for Source Attribution and Blind Edit Localization",
+    "reason": "Image watermarking for source attribution and edit localization is outside network traffic anomaly detection and outside practitioner defensive topics, so it falls under skip.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.16311": {
+    "date": "2026-11-17",
+    "title": "What Does It Cost to Force-Close a Lightning Channel? Evidence from 974,000 Channel Closes, 2018-2026",
+    "reason": "Measures Lightning Network channel-close fees on Bitcoin, a blockchain payment-economics topic outside network intrusion detection and not a practitioner defense concern.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.16244": {
+    "date": "2026-11-17",
+    "title": "SEC: One-Share Everywhere-Short Secret Sharing from Lossless Expanders",
+    "reason": "Secret sharing over lattice-based cryptography with expander codes is cryptographic work outside the reader's intrusion-detection and defensive ML focus, so it falls under skip.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.16239": {
+    "date": "2026-11-17",
+    "title": "Optimal feature selection for firewall log analysis using Machine learning and Hybrid Metaheuristic algorithms",
+    "reason": "Firewall log classification with feature selection is network-security ML, and its leakage-aware re-evaluation (duplicates, split protocol) is a useful benchmark-pitfall example, though it is supervised and off the thesis's anomaly-detection focus.",
+    "tier": "thesis",
+    "score": 4
+  },
+  "2611.16158": {
+    "date": "2026-11-17",
+    "title": "PolicySniff: Inferring Agent Policy States through Shared-GPU Execution",
+    "reason": "A GPU side-channel attack that infers LLM agent policy settings is offensive work on AI systems, outside the thesis's network-traffic anomaly detection scope and not a practitioner defense topic.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.16151": {
+    "date": "2026-11-17",
+    "title": "Fault Injection Attacks on Q-Learning: Analysis, Vulnerabilities, and Countermeasures",
+    "reason": "Hardware fault injection attacks on Q-learning agents fall under attacks on AI models and hardware security, which are explicitly out of scope.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.16128": {
+    "date": "2026-11-17",
+    "title": "CoordX Types: A Trustless, Swappable Type System for Shared Records",
+    "reason": "A protocol-layer type system for shared records with signed entries; it is not about network traffic anomaly detection, DoS, datasets, evaluation, or defensive ML, so it falls outside all tiers.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.16122": {
+    "date": "2026-11-17",
+    "title": "Intent-Aware Protection for AI Agents",
+    "reason": "Focuses on AI agent security against prompt injection and intent drift, which falls under the skip category for AI safety and prompt injection rather than network traffic anomaly detection.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.16110": {
+    "date": "2026-11-17",
+    "title": "Harnessing Environmental Scatterers for Endogenous Target Covertness in 6G ISAC: A New Paradigm for Sensing Security",
+    "reason": "6G ISAC wireless physical-layer security with target covertness is unrelated to network intrusion detection, DoS, or defensive ML, so it falls outside the reader's interests.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.16103": {
+    "date": "2026-11-17",
+    "title": "Low Probability of Target Detection in Wireless Sensing by Harnessing Reconfigurable-antenna based Reflectors",
+    "reason": "Wireless sensing target-concealment via reconfigurable reflectors is a wireless/5G-style physical-layer optimization topic, outside the reader's network intrusion detection and DoS focus and not defensive security practice.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.16066": {
+    "date": "2026-11-17",
+    "title": "Optimal Additive Integer Masks for One-Guess Vulnerability under an Absolute-Moment Budget",
+    "reason": "Pure information-theoretic analysis of additive integer masks and one-guess vulnerability, with no connection to network traffic, intrusion detection, or defensive practice; it falls under the skip category.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.16065": {
+    "date": "2026-11-17",
+    "title": "Tokenized Reward Systems for Federated Learning: The Privacy vs. Fairness Tradeoff",
+    "reason": "Blockchain reward mechanisms and ZK incentive contracts for federated learning fall under the skip list (cryptography, blockchain, privacy and federated learning theory) and are not network intrusion detection.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.16048": {
+    "date": "2026-11-17",
+    "title": "Privacy Leakage from Recurrent State in LLM Inference",
+    "reason": "Privacy leakage from LLM recurrent state and GPU power side channels falls under the skip categories of privacy and hardware security, with no link to network intrusion detection.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.16018": {
+    "date": "2026-11-17",
+    "title": "Protocol-Aware Auditing of Domain-Blind Feature Attribution in Network Intrusion Detection",
+    "reason": "Audits explanation methods (LIME, SHAP, IG, DeepLIFT) on NIDS datasets, which bears on explaining alerts and on evaluating detectors, though it is not about unsupervised slow-DoS detection.",
+    "tier": "thesis",
+    "score": 5
+  },
+  "2611.15958": {
+    "date": "2026-11-17",
+    "title": "DUFT: Device-Unique Feedback Traversal for Entropy-Estimated Response Extraction and Mutual Authentication using SRAM PUFs",
+    "reason": "SRAM PUF-based authentication and key encapsulation for embedded IoT devices is outside the reader's network traffic anomaly detection focus and falls under cryptography/hardware security, which is skipped.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.15847": {
+    "date": "2026-11-17",
+    "title": "SoK: Design Choices in Tendermint BFT Consensus",
+    "reason": "Blockchain BFT consensus design survey; unrelated to network intrusion detection, DoS, or defensive ML, so it falls outside the reader's scope.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.15770": {
+    "date": "2026-11-17",
+    "title": "Privacy-Preserving Spectrum Data Obfuscation in Next-Generation Spectrum Coexistence Systems",
+    "reason": "Privacy-preserving obfuscation of spectrum occupancy data in wireless coexistence systems is outside the reader's network intrusion detection and DoS focus and falls under the skipped wireless and privacy topics.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.15737": {
+    "date": "2026-11-17",
+    "title": "Beyond the Diff - VulSpot: A Vulnerability Dataset Where No Vulnerability Goes Unlocalized",
+    "reason": "Source-code vulnerability datasets for C/C++ function localization fall outside the reader's network-traffic DoS thesis and outside the field list, though benchmark-leakage lessons are loosely transferable.",
+    "tier": "skip",
+    "score": 3
+  },
+  "2611.15583": {
+    "date": "2026-11-17",
+    "title": "Your Secrets Are Showing: Deep Image Hiding Models Are Surprisingly Easy to Attack",
+    "reason": "Studies cross-model extraction of hidden images in deep image steganography, which is outside network traffic intrusion detection and not practitioner-relevant defensive work for the reader.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.15489": {
+    "date": "2026-11-17",
+    "title": "Taxonomizing Synthetic Data for Law",
+    "reason": "Legal and policy taxonomy of synthetic data concerns privacy and bias, far from network intrusion detection, evaluation of detectors, or defensive ML work, so it should be skipped.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.15472": {
+    "date": "2026-11-17",
+    "title": "What You See Is (Not) What You Got: The Human Factor in PDF Signature Verification",
+    "reason": "It studies human deception through forged PDF signature blocks, which is outside network intrusion detection, DoS, ML-based detection and the other defensive topics this reader needs.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.15469": {
+    "date": "2026-11-17",
+    "title": "HARE: Fast Read Disturbance Threshold Profiling in Modern DRAM Chips via Reduced Timing Constraints",
+    "reason": "DRAM read-disturbance profiling is hardware security and falls under the skip list, not network traffic detection or practitioner-facing defensive ML.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.15462": {
+    "date": "2026-11-17",
+    "title": "Chinese Whispers About Vulnerabilities",
+    "reason": "Measures how vulnerability information spreads across online references, which is vulnerability-management research and not network traffic anomaly detection, DoS detection, or evaluation of detectors.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.15432": {
+    "date": "2026-11-17",
+    "title": "Weak Unit Reducibility of the Eleventh Cyclotomic Field",
+    "reason": "Pure algebraic number theory on unit reducibility of cyclotomic fields and lattice shortest vectors, with no connection to network traffic, intrusion detection, or defensive security.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.15374": {
+    "date": "2026-11-17",
+    "title": "Full Mesh Dynamic Four-User Entanglement-based Switched QKD Network Integrated with SD-KMS",
+    "reason": "Quantum key distribution network hardware and key management is outside the reader's anomaly-detection thesis and not a defensive ML or SOC topic, so it falls under skip.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.15373": {
+    "date": "2026-11-17",
+    "title": "SecDVA: A Maliciously Secure Multi-Party Framework for Data Value Assessment in Modern Machine Learning Data Markets",
+    "reason": "Multi-party cryptographic data valuation for data markets is about privacy-preserving MPC, outside the reader's intrusion detection and evaluation focus and not a defensive-security practitioner topic.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.15316": {
+    "date": "2026-11-17",
+    "title": "IoTPwnBench: A Synthetic Benchmark for IoT Firmware Security Analysis",
+    "reason": "Benchmark for IoT firmware vulnerability analysis tools, which is outside the reader's network-traffic anomaly detection thesis and not a defensive ML or detection-engineering topic.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.15302": {
+    "date": "2026-11-17",
+    "title": "Browser Immune System (BIS): Innate and Adaptive Threat Detection in the Browser with a Cybersecurity Transformer",
+    "reason": "A browser-side defensive page screener built on a transformer; relevant to web defenses for a practitioner but not to the thesis's traffic-based, unsupervised DoS detection.",
+    "tier": "field",
+    "score": 4
+  },
+  "2611.15128": {
+    "date": "2026-11-17",
+    "title": "Affine Combiners for Reed-Solomon Proximity Gaps",
+    "reason": "Proximity gaps and correlated agreement for Reed-Solomon codes are coding-theory foundations of IOP/SNARK soundness, not network intrusion detection, so the thesis cannot use it and it falls outside defensive security practice.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.15118": {
+    "date": "2026-11-17",
+    "title": "Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents",
+    "reason": "Primarily an attack on AI model weights (backdoors in agents), which falls under the skip tier rather than network-traffic detection or evaluation work.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.15102": {
+    "date": "2026-11-17",
+    "title": "One Fabrication Is Enough: A Fake News Article Changes the Forecasts of LLM Forecasting Systems",
+    "reason": "It attacks LLM forecasters through poisoned retrieved news, which is an attack on AI models outside the thesis scope and not a defensive network or security topic.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.15019": {
+    "date": "2026-11-17",
+    "title": "obfsgen: Generative Tunnel Obfuscation",
+    "reason": "Presents a traffic-shape obfuscator for hiding censorship-circumvention tunnels, which is evasion work outside anomaly detection and outside defensive practice.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.15013": {
+    "date": "2026-11-17",
+    "title": "Protecting Sensitive Knowledge Under LLM Unlearning: The Proxy Threat and a Superposition-Aware Defense",
+    "reason": "This paper studies attacks and defenses on LLM unlearning, which falls under the skip category for attacks on AI models and unlearning.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.14984": {
+    "date": "2026-11-17",
+    "title": "VRMaaS: Verifiable Reward-Model-as-a-Service for Trustworthy LLM Alignment",
+    "reason": "Cryptographic verification of LLM reward-model outputs with zero-knowledge proofs and on-chain contracts falls under the skip categories of cryptography, blockchain, and AI alignment, with no link to network intrusion detection.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.14978": {
+    "date": "2026-11-17",
+    "title": "Hijacking a Trusted LLM in Real-World Quantized Deployments Only Requires a Disguised Adapter",
+    "reason": "An attack on LLM adapters (quantization-triggered hijacking), which falls under the skip tier for attacks on AI models rather than network defense.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.14970": {
+    "date": "2026-11-17",
+    "title": "Poison-then-Hide: Finetuning-Activated Backdoor Attack on Pretrained Vision Encoders",
+    "reason": "Backdoor attack on pretrained vision encoders is an attack on AI models, which falls under the skip tier explicitly listed.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.14950": {
+    "date": "2026-11-17",
+    "title": "Stress-Testing Sandbagging Detection Under Adaptive Attack",
+    "reason": "Studies LLM sandbagging and adaptive attacks on AI-safety detectors, which falls under the skip category for attacks on AI models rather than network intrusion detection.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17377": {
+    "date": "2026-11-17",
+    "title": "Beyond Attack-Based Accuracy: Rethinking Adversarial Robustness Evaluation Through Structural Gradient Alignment",
+    "reason": "Studies adversarial robustness of vision models and VLMs, which the reader's scope explicitly excludes as attacks on AI models rather than network defense.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.14929": {
+    "date": "2026-11-17",
+    "title": "Speech Tokenizers are Vulnerable: Transferable Semantic Attack and Robust Tokenizer",
+    "reason": "Adversarial attack on speech tokenizers and ASR/LALM models is an attack on AI models, which falls under the skip tier.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.14916": {
+    "date": "2026-11-17",
+    "title": "CuEVM: Scaling Smart Contract Execution on GPUs",
+    "reason": "GPU-accelerated Ethereum Virtual Machine execution for smart contracts and fuzzing is outside the reader's network intrusion detection focus and falls under skipped blockchain work.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.14897": {
+    "date": "2026-11-17",
+    "title": "Social Engineering Attack Detection in Corporate Communications",
+    "reason": "Supervised phishing email classification with lexicon features is defensive ML outside the thesis's network-traffic, unsupervised scope, but a practitioner might find it useful.",
+    "tier": "field",
+    "score": 3
+  },
+  "2611.14880": {
+    "date": "2026-11-17",
+    "title": "FOE-Dreamer: Deployment-Efficient Learning of Cyber Defense Policies in Operational Networks",
+    "reason": "Defensive RL for autonomous cyber response policies in live networks is outside the thesis's detection scope, but it is applied defensive ML a practitioner might want to know about.",
+    "tier": "field",
+    "score": 4
+  },
+  "2611.14864": {
+    "date": "2026-11-17",
+    "title": "When Safety Becomes an Attack Surface: Manipulating Abstention in Tool-Using AI Agents",
+    "reason": "Studies prompt-injection-style availability attacks on tool-using LLM agents, which falls under the excluded AI-safety and attacks-on-AI-models category rather than network intrusion detection.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.14835": {
+    "date": "2026-11-17",
+    "title": "What Does an RF Fingerprint Identify? A Cross-Corpus Evaluation of Hardware-Family-Associated and Unit-Level Signal",
+    "reason": "RF transmitter fingerprinting and hardware-family identity are wireless and hardware security topics outside network traffic anomaly detection, so the thesis and field tiers do not apply.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.14808": {
+    "date": "2026-11-17",
+    "title": "OverServe: Resource Amplification Attacks on SaaS Agents via Tool--Prompt Co-Design",
+    "reason": "Offensive resource-amplification attack on LLM agents, which falls under the skip tier rather than defensive network detection.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.14698": {
+    "date": "2026-11-17",
+    "title": "Incrementally Verifiable Oracle Aided Computation",
+    "reason": "Cryptographic SNARG/IVC construction for oracle-aided computation under LWE; relevant to neither network intrusion detection nor defensive ML practice, so skip.",
+    "tier": "skip",
+    "score": 1
+  },
+  "2611.21473": {
+    "date": "2026-11-17",
+    "title": "Network Intrusion Detection Adaptability under Spurious Labels: A Noise-Aware Few-Shot Class-Incremental Learning Framework",
+    "reason": "Network intrusion detection under label noise on network-flow datasets, close to the thesis topic of label errors in traffic data, though it is supervised few-shot rather than unsupervised.",
+    "tier": "thesis",
+    "score": 6
+  },
+  "2611.20810": {
+    "date": "2026-11-17",
+    "title": "Prediction-Driven Contract Matching with Controlled Overbooking for Cloud-Edge DDoS Scrubbing Markets",
+    "reason": "Market contract-matching and capacity-pricing mechanism for DDoS scrubbing, not anomaly detection, traffic features, or dataset/evaluation work the thesis could use.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17826": {
+    "date": "2026-11-17",
+    "title": "Space-based Zero-trust Architecture for Securing the Direct-to-Cell Paradigm",
+    "reason": "Satellite direct-to-cell zero-trust architecture with RF fingerprint authentication and 6G security is outside the reader's network-traffic anomaly detection scope and not a practitioner defensive topic, so it is skipped.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.21562": {
+    "date": "2026-11-17",
+    "title": "Severe but Harmless: Stress-Testing Shift Severity for Frozen Time-Series Forecasters",
+    "reason": "Its audit of distribution-shift severity measures on traffic datasets touches evaluation pitfalls for time-series models that the thesis could draw on, though it focuses on forecasting rather than detection.",
+    "tier": "thesis",
+    "score": 5
+  },
+  "2611.20334": {
+    "date": "2026-11-17",
+    "title": "Residual-Tail-Informed Flow Matching for Time Series Anomaly Detection",
+    "reason": "Generic deep generative time-series anomaly detection on unspecified benchmarks, not network traffic or DoS, and it relies on deep learning the reader excludes.",
+    "tier": "skip",
+    "score": 3
+  },
+  "2611.18370": {
+    "date": "2026-11-17",
+    "title": "f-Divergence Self-Play for Tabular Anomaly Detection via Large Language Models",
+    "reason": "A general tabular anomaly-detection method that uses an LLM as the detector, which the reader excludes, and it is not about network traffic or security.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.17869": {
+    "date": "2026-11-17",
+    "title": "Process Mining-Enabled Federated Anomaly Detection for the Industrial IoT",
+    "reason": "Federated anomaly detection for industrial IoT time series is outside the reader's thesis scope (network traffic, DoS, one-class methods on traffic features) and not a practitioner defensive topic, so it should be skipped.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.16789": {
+    "date": "2026-11-17",
+    "title": "ScrewSense: Mapping the Invisible - Anomaly Detection and Error Classification in Screwdriving Processes",
+    "reason": "Industrial screwdriving process monitoring with deep learning; it is neither network traffic nor security-related, so it falls outside both the thesis and field scopes.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.16772": {
+    "date": "2026-11-17",
+    "title": "Class-Competence Aggregation: Output-Layer Routing for Federated Multiclass DDoS Detection under Class-Concentrated Non-IID Data",
+    "reason": "Federated aggregation method for multiclass DDoS detection; it touches DoS detection but is mainly federated learning method work, not practitioner-relevant defense.",
+    "tier": "field",
+    "score": 3
+  },
+  "2611.16648": {
+    "date": "2026-11-17",
+    "title": "GNN-Enhanced TCN Algorithms for ECG Anomaly Detection",
+    "reason": "Deep learning GNN/TCN pipeline for ECG anomaly detection is outside the reader's scope (no deep learning, not network traffic), so it should be skipped.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.16184": {
+    "date": "2026-11-17",
+    "title": "Flow-CAD: Flow Matching for Contextual Anomaly Detection and Explanation in Tabular Data",
+    "reason": "Unsupervised contextual anomaly detection on tabular data could be cited in the state of the art, though it is generic rather than network-specific and uses deep flow-matching models the reader excludes.",
+    "tier": "thesis",
+    "score": 4
+  },
+  "2611.15465": {
+    "date": "2026-11-17",
+    "title": "On-Edge Acoustic Continual Anomaly Detection: A Cross-Platform Comparative Study",
+    "reason": "Acoustic machine-condition monitoring on microcontrollers is outside network intrusion detection and defensive security, so it doesn't fit the thesis or field tiers.",
+    "tier": "skip",
+    "score": 2
+  },
+  "2611.15073": {
+    "date": "2026-11-17",
+    "title": "When Does Causality Help in Multivariate Time-Series Anomaly Detection?",
+    "reason": "Careful study of when causal scoring helps in multivariate time-series anomaly detection, with explicit evaluation-protocol pitfalls (point-adjust vs. range-aware VUS), directly relevant to the thesis's evaluation methodology.",
+    "tier": "thesis",
+    "score": 7
+  }
+}

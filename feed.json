@@ -1,0 +1,641 @@
+{
+  "updated": "2026-11-17T19:04:48+00:00",
+  "cards": [
+    {
+      "id": "2205.07109",
+      "url": "https://arxiv.org/abs/2205.07109",
+      "title": "Unsupervised Abnormal Traffic Detection through Topological Flow Analysis",
+      "authors": [
+        "Paul Irofti",
+        "Andrei Pătraşcu",
+        "Andrei Iulian Hîji"
+      ],
+      "published": "2022-05-14",
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "abstract": "Cyberthreats are a permanent concern in our modern technological world. In the recent years, sophisticated traffic analysis techniques and anomaly detection (AD) algorithms have been employed to face the more and more subversive adversarial attacks. A malicious intrusion, defined as an invasive action intending to illegally exploit private resources, manifests through unusual data traffic and/or abnormal connectivity pattern. Despite the plethora of statistical or signature-based detectors currently provided in the literature, the topological connectivity component of a malicious flow is less exploited. Furthermore, a great proportion of the existing statistical intrusion detectors are based on supervised learning, that relies on labeled data. By viewing network flows as weighted directed interactions between a pair of nodes, in this paper we present a simple method that facilitate the use of connectivity graph features in unsupervised anomaly detection algorithms. We test our methodology on real network traffic datasets and observe several improvements over standard AD.",
+      "added": "2026-11-17",
+      "seed": true,
+      "tier": "thesis",
+      "score": null,
+      "reason": "It is on the reader's reading list.",
+      "card": {
+        "summary": "Autorii privesc fluxurile de rețea ca interacțiuni direcționate și ponderate între perechi de noduri. Din ele extrag trăsături de conectivitate (graph features) care pot fi folosite în algoritmi nesupervizați de anomaly detection. Pe seturi de date cu trafic real raportează îmbunătățiri față de AD standard, dar abstractul nu dă cifre.",
+        "evaluation": "Abstractul menționează doar „seturi de date cu trafic real de rețea” și comparația cu AD standard (fără alte detalii).",
+        "use": "Poate sta în capitolul de state of the art, ca argument că trăsăturile de conectivitate completează statisticile pe ferestre scurte. Verifică în textul complet ce trăsături de graf folosesc, ce detectori nesupervizați testează (dacă apare Isolation Forest) și pe ce date. Verifică și dacă metoda ar prinde atacuri low-rate precum Slowloris, unde topologia conexiunilor probabil se schimbă puțin.",
+        "action": "skim",
+        "concept": {
+          "name": "Graph features pentru anomaly detection",
+          "explanation": "Gândește-te la rețea ca la o rețea de prieteni: un om care deodată vorbește cu sute de necunoscuți iese în evidență, chiar dacă fiecare mesaj în parte e normal. Fiecare gazdă este un nod, iar fiecare flux o muchie direcționată, cu pondere (de exemplu număr de octeți sau de pachete). Din acest graf se calculează valori precum numărul de vecini sau suma ponderilor, adăugate ca trăsături pentru detector. Contează pentru teza ta pentru că îți arată o altă sursă de trăsături, pe lângă statisticile pe ferestre de timp."
+        },
+        "terms": [
+          {
+            "term": "Signature-based detector",
+            "meaning": "Detector care recunoaște atacuri după tipare cunoscute dinainte, deci nu prinde atacuri noi."
+          },
+          {
+            "term": "Supervised learning",
+            "meaning": "Învățare care cere date etichetate, ceea ce în trafic real este scump și greu de obținut."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2503.17867",
+      "url": "https://arxiv.org/abs/2503.17867",
+      "title": "Detecting and Mitigating DDoS Attacks with AI: A Survey",
+      "authors": [
+        "Alexandru Apostu",
+        "Silviu Gheorghe",
+        "Andrei Hîji",
+        "Nicolae Cleju",
+        "Andrei Pătraşcu",
+        "Cristian Rusu",
+        "Radu Ionescu",
+        "Paul Irofti"
+      ],
+      "published": "2025-03-22",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.LG",
+        "cs.NI"
+      ],
+      "abstract": "Distributed Denial of Service attacks represent an active cybersecurity research problem. Recent research shifted from static rule-based defenses towards AI-based detection and mitigation. This comprehensive survey covers several key topics. Preeminently, state-of-the-art AI detection methods are discussed. An in-depth taxonomy based on manual expert hierarchies and an AI-generated dendrogram are provided, thus settling DDoS categorization ambiguities. An important discussion on available datasets follows, covering data format options and their role in training AI detection methods together with adversarial training and examples augmentation. Beyond detection, AI based mitigation techniques are surveyed as well. Finally, multiple open research directions are proposed.",
+      "added": "2026-11-17",
+      "seed": true,
+      "tier": "thesis",
+      "score": null,
+      "reason": "It is on the reader's reading list.",
+      "card": {
+        "summary": "Un survey despre atacurile DDoS și apărarea lor cu AI, care marchează trecerea de la apărarea statică bazată pe reguli la detecție și mitigare bazate pe AI. Autorii oferă o taxonomie a atacurilor, construită atât manual, din ierarhii de experți, cât și printr-o dendrogramă generată de AI, și discută seturile de date disponibile, formatele lor, adversarial training și augmentarea exemplelor. Acoperă și tehnicile de mitigare și propun direcții de cercetare viitoare.",
+        "evaluation": "",
+        "use": "Se potrivește în capitolul State of the art: taxonomia te ajută să plasezi atacurile low-rate și slow (Slowloris) față de DDoS-ul volumetric și să justifici alegerea ta. Secțiunea despre seturi de date și formate de date poate sprijini capitolul de metodologie. Verifică în textul complet unde apar atacurile low-rate și dacă detecția nesupervizată este tratată, plus ce se spune despre mitigare, relevant pentru extensia cu agentul LLM.",
+        "action": "skim",
+        "concept": {
+          "name": "Taxonomie de atacuri",
+          "explanation": "O taxonomie e o hartă care grupează atacurile în categorii și subcategorii, ca un catalog de bibliotecă. Aceeași tehnică poate primi nume diferite în lucrări diferite, iar asta creează ambiguitate. Pentru teza ta contează, pentru că trebuie să spui clar unde se încadrează atacurile low-rate și slow și cu ce sunt comparate. Aici autorii combină ierarhii făcute de experți cu o dendrogramă generată de AI, adică un arbore obținut prin gruparea automată a atacurilor după similaritate."
+        },
+        "terms": [
+          {
+            "term": "adversarial training",
+            "meaning": "Antrenarea unui model și pe exemple modificate intenționat pentru a-l păcăli, ca să devină mai robust la evaziune."
+          },
+          {
+            "term": "dendrogram",
+            "meaning": "Un arbore care arată cum sunt grupate elementele similare, pas cu pas, prin clustering ierarhic."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2404.04064",
+      "url": "https://arxiv.org/abs/2404.04064",
+      "title": "Fusing Dictionary Learning and Support Vector Machines for Unsupervised Anomaly Detection",
+      "authors": [
+        "Paul Irofti",
+        "Iulian-Andrei Hîji",
+        "Andrei Pătraşcu",
+        "Nicolae Cleju"
+      ],
+      "published": "2024-04-05",
+      "categories": [
+        "cs.LG",
+        "cs.CR",
+        "math.NA"
+      ],
+      "abstract": "We study in this paper the improvement of one-class support vector machines (OC-SVM) through sparse representation techniques for unsupervised anomaly detection. As Dictionary Learning (DL) became recently a common analysis technique that reveals hidden sparse patterns of data, our approach uses this insight to endow unsupervised detection with more control on pattern finding and dimensions. We introduce a new anomaly detection model that unifies the OC-SVM and DL residual functions into a single composite objective, subsequently solved through K-SVD-type iterative algorithms. A closed-form of the alternating K-SVD iteration is explicitly derived for the new composite model and practical implementable schemes are discussed. The standard DL model is adapted for the Dictionary Pair Learning (DPL) context, where the usual sparsity constraints are naturally eliminated. Finally, we extend both objectives to the more general setting that allows the use of kernel functions. The empirical convergence properties of the resulting algorithms are provided and an in-depth analysis of their parametrization is performed while also demonstrating their numerical performance in comparison with existing methods.",
+      "added": "2026-11-17",
+      "seed": true,
+      "tier": "thesis",
+      "score": null,
+      "reason": "It is on the reader's reading list.",
+      "card": {
+        "summary": "Autorii îmbunătățesc one-class SVM (OC-SVM) cu tehnici de sparse representation. Propun un model nou care unifică funcția obiectiv a OC-SVM cu reziduul din Dictionary Learning (DL) într-un singur obiectiv compus, rezolvat cu iterații de tip K-SVD, pentru care derivă explicit o formă închisă. Adaptează modelul la Dictionary Pair Learning, unde constrângerile de sparsity dispar, și îl extind cu funcții kernel. Abstractul nu dă cifre.",
+        "evaluation": "Abstractul menționează analiza convergenței empirice, o analiză a parametrizării și o comparație numerică cu metode existente. Nu numește seturi de date, metrici sau baselines.",
+        "use": "Aceasta este metoda coordonatorului tău (DL-OCSVM), deci stă în centrul capitolelor despre state of the art și metodologie. Din textul complet extrage funcția obiectiv compusă, rolul fiecărui parametru și varianta cu kernel, ca să le descrii corect. Verifică ce date și ce baselines folosesc, cât costă antrenarea și dacă merge pe features de trafic pe ferestre scurte, deoarece asta decide cât de ușor o compari cu Isolation Forest, LOF și OC-SVM.",
+        "action": "read",
+        "concept": {
+          "name": "Dictionary Learning și sparse representation",
+          "explanation": "Dictionary Learning caută un set de „atomi” (tipare de bază) din care fiecare exemplu se poate reconstrui combinând doar câțiva atomi, ca o propoziție scrisă cu puține cuvinte dintr-un vocabular. Datele normale se reconstruiesc bine, deci reziduul (eroarea de reconstrucție) e mic. Un punct anormal se potrivește prost cu dicționarul și are reziduu mare. Aici reziduul este combinat cu OC-SVM, care trasează granița regiunii normale, iar ambele părți se optimizează împreună."
+        },
+        "terms": [
+          {
+            "term": "K-SVD",
+            "meaning": "Algoritm iterativ care alternează între găsirea coeficienților sparse și actualizarea atomilor dicționarului."
+          },
+          {
+            "term": "Dictionary Pair Learning (DPL)",
+            "meaning": "Variantă care învață două dicționare (de sinteză și de analiză), astfel încât constrângerile de sparsity nu mai sunt necesare."
+          }
+        ]
+      }
+    },
+    {
+      "id": "1802.09089",
+      "url": "https://arxiv.org/abs/1802.09089",
+      "title": "Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection",
+      "authors": [
+        "Yisroel Mirsky",
+        "Tomer Doitshman",
+        "Yuval Elovici",
+        "Asaf Shabtai"
+      ],
+      "published": "2018-02-25",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "abstract": "Neural networks have become an increasingly popular solution for network intrusion detection systems (NIDS). Their capability of learning complex patterns and behaviors make them a suitable solution for differentiating between normal traffic and network attacks. However, a drawback of neural networks is the amount of resources needed to train them. Many network gateways and routers devices, which could potentially host an NIDS, simply do not have the memory or processing power to train and sometimes even execute such models. More importantly, the existing neural network solutions are trained in a supervised manner. Meaning that an expert must label the network traffic and update the model manually from time to time. In this paper, we present Kitsune: a plug and play NIDS which can learn to detect attacks on the local network, without supervision, and in an efficient online manner. Kitsune's core algorithm (KitNET) uses an ensemble of neural networks called autoencoders to collectively differentiate between normal and abnormal traffic patterns. KitNET is supported by a feature extraction framework which efficiently tracks the patterns of every network channel. Our evaluations show that Kitsune can detect various attacks with a performance comparable to offline anomaly detectors, even on a Raspberry PI. This demonstrates that Kitsune can be a practical and economic NIDS.",
+      "added": "2026-11-17",
+      "seed": true,
+      "tier": "thesis",
+      "score": null,
+      "reason": "It is on the reader's reading list.",
+      "card": {
+        "summary": "Autorii prezintă Kitsune, un NIDS „plug and play” care învață fără supervizare, online, să detecteze atacuri în rețeaua locală. Nucleul, KitNET, este un ensemble de autoencoders, susținut de un framework de extragere a trăsăturilor care urmărește eficient tiparele fiecărui canal de rețea. Rezultatul: detectează diverse atacuri cu performanță comparabilă cu detectoarele offline, chiar și pe un Raspberry Pi.",
+        "evaluation": "",
+        "use": "Este un punct de referință pentru capitolul de state of the art: arată cum se pot calcula trăsături statistice pe fluxuri în mod incremental, ceea ce se apropie de ferestrele tale de timp. Deși tu nu folosești deep learning, merită verificat în textul complet cum sunt definite trăsăturile și ferestrele, ce atacuri DoS apar în evaluare și dacă sunt raportate întârzierea detecției sau alarmele false, nu doar scoruri globale.",
+        "action": "read",
+        "concept": {
+          "name": "Autoencoder pentru detecția anomaliilor",
+          "explanation": "Un autoencoder este o rețea neuronală care comprimă datele de intrare și apoi încearcă să le reconstruiască. Dacă este antrenat doar pe trafic normal, îl reconstruiește bine, dar pe trafic ciudat greșește mult. Eroarea de reconstrucție devine astfel scorul de anomalie, un pic ca un copist care a învățat un singur stil și greșește când primește altul. Aici contează pentru că permite detecția fără etichete, la fel ca Isolation Forest în teza ta."
+        },
+        "terms": [
+          {
+            "term": "ensemble",
+            "meaning": "Un grup de modele mici ale căror rezultate sunt combinate pentru a lua o decizie comună."
+          },
+          {
+            "term": "online learning",
+            "meaning": "Modelul se antrenează și se actualizează pe măsură ce sosesc datele, fără a le stoca și reprocesa pe toate."
+          }
+        ]
+      }
+    },
+    {
+      "id": "1803.03639",
+      "url": "https://arxiv.org/abs/1803.03639",
+      "title": "Precision and Recall for Time Series",
+      "authors": [
+        "Nesime Tatbul",
+        "Tae Jun Lee",
+        "Stan Zdonik",
+        "Mejbah Alam",
+        "Justin Gottschlich"
+      ],
+      "published": "2018-03-08",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "abstract": "Classical anomaly detection is principally concerned with point-based anomalies, those anomalies that occur at a single point in time. Yet, many real-world anomalies are range-based, meaning they occur over a period of time. Motivated by this observation, we present a new mathematical model to evaluate the accuracy of time series classification algorithms. Our model expands the well-known Precision and Recall metrics to measure ranges, while simultaneously enabling customization support for domain-specific preferences.",
+      "added": "2026-11-17",
+      "seed": true,
+      "tier": "thesis",
+      "score": null,
+      "reason": "It is on the reader's reading list.",
+      "card": {
+        "summary": "Autorii pornesc de la observația că anomaliile clasice sunt punctuale, dar multe anomalii reale se întind pe un interval de timp. Ei propun un model matematic nou care extinde Precision și Recall la intervale (range-based). Modelul permite și personalizarea după preferințele domeniului. Abstractul nu dă cifre.",
+        "evaluation": "",
+        "use": "Atacurile Slowloris durează minute sau ore, deci sunt anomalii pe interval, nu puncte; metrica asta se potrivește direct în capitolul de metodologie, unde justifici de ce nu folosești doar F1 pe ferestre. Verifică în textul complet cum sunt definite parametrii de personalizare (de exemplu ponderea poziției în interval și a suprapunerii), pentru că pot fi legați de timpul până la detecție. Verifică și cum tratează alarmele multiple pe același interval, relevante pentru alarmele false pe oră.",
+        "action": "read",
+        "concept": {
+          "name": "Range-based Precision și Recall",
+          "explanation": "Metricile clasice numără puncte: fiecare punct e prins sau ratat. Un atac lung e ca un incendiu de câteva ore: contează dacă alarma a prins doar ultimele minute sau tot intervalul, și dacă a sunat o dată sau de zece ori. Recall pe interval măsoară cât din intervalul real a fost acoperit de predicții, iar Precision cât din intervalul prezis chiar e anomalie. Contează aici pentru că un detector care anunță atacul târziu și unul care îl anunță imediat ar primi aceeași notă la metricile pe puncte."
+        },
+        "terms": [
+          {
+            "term": "point-based anomaly",
+            "meaning": "Anomalie care apare într-un singur moment de timp, nu pe o durată."
+          },
+          {
+            "term": "range-based anomaly",
+            "meaning": "Anomalie care se întinde pe o perioadă de timp, de exemplu un atac DoS lent."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2109.05257",
+      "url": "https://arxiv.org/abs/2109.05257",
+      "title": "Towards a Rigorous Evaluation of Time-series Anomaly Detection",
+      "authors": [
+        "Siwon Kim",
+        "Kukjin Choi",
+        "Hyun-Soo Choi",
+        "Byunghan Lee",
+        "Sungroh Yoon"
+      ],
+      "published": "2021-09-11",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ME"
+      ],
+      "abstract": "In recent years, proposed studies on time-series anomaly detection (TAD) report high F1 scores on benchmark TAD datasets, giving the impression of clear improvements in TAD. However, most studies apply a peculiar evaluation protocol called point adjustment (PA) before scoring. In this paper, we theoretically and experimentally reveal that the PA protocol has a great possibility of overestimating the detection performance; that is, even a random anomaly score can easily turn into a state-of-the-art TAD method. Therefore, the comparison of TAD methods after applying the PA protocol can lead to misguided rankings. Furthermore, we question the potential of existing TAD methods by showing that an untrained model obtains comparable detection performance to the existing methods even when PA is forbidden. Based on our findings, we propose a new baseline and an evaluation protocol. We expect that our study will help a rigorous evaluation of TAD and lead to further improvement in future researches.",
+      "added": "2026-11-17",
+      "seed": true,
+      "tier": "thesis",
+      "score": null,
+      "reason": "It is on the reader's reading list.",
+      "card": {
+        "summary": "Autorii arată, teoretic și experimental, că protocolul point adjustment (PA), folosit în majoritatea studiilor de time-series anomaly detection, supraestimează performanța: chiar și un anomaly score aleator poate ajunge la rezultate de tip state-of-the-art. Mai arată că un model neantrenat obține rezultate comparabile cu metodele existente când PA este interzis. Propun un nou baseline și un nou protocol de evaluare.",
+        "evaluation": "Abstractul menționează scorul F1 pe seturi de date benchmark pentru TAD, evaluat cu și fără protocolul point adjustment, și comparația cu un anomaly score aleator și cu un model neantrenat. Nu numește seturi de date sau metode concrete.",
+        "use": "Este util pentru capitolul de state of the art și pentru metodologie: oferă argumentul pentru care nu folosești un singur F1 și pentru care evaluezi pe time to detection și false alarms per hour. Verifică în textul complet cum arată exact noul protocol și baseline-ul și dacă îl poți adapta la ferestrele de timp din atacurile slow DoS. Verifică și dacă un baseline neantrenat ar fi o comparație utilă pentru Isolation Forest.",
+        "action": "read",
+        "concept": {
+          "name": "Point adjustment (PA)",
+          "explanation": "Anomaliile dintr-o serie de timp apar de obicei în segmente continue. Cu PA, dacă detectorul semnalează un singur punct din segment, tot segmentul este numărat ca detectat. E ca la un test în care un singur răspuns corect ți-ar da punctajul pe toată pagina. Un detector care dă alarme aleatoare are astfel șanse mari să nimerească câte un punct în fiecare segment lung, iar F1 iese umflat. Pentru un atac slow DoS, care durează mult, efectul ar fi probabil foarte puternic.."
+        },
+        "terms": [
+          {
+            "term": "Random anomaly score",
+            "meaning": "Scor de anomalie generat aleator, fără să se uite la date, folosit aici ca să arate cât de ușor poate fi păcălit F1 cu PA."
+          },
+          {
+            "term": "Untrained model",
+            "meaning": "Model cu parametri neantrenați (probabil inițializați aleator), care dă totuși rezultate apropiate de metodele existente, deci un baseline simplu și incomod."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2510.13257",
+      "url": "https://arxiv.org/abs/2510.13257",
+      "title": "GRIDAI: Generating and Repairing Intrusion Detection Rules via Collaboration among Multiple LLM-based Agents",
+      "authors": [
+        "Jiarui Li",
+        "Yuhan Chai",
+        "Lei Du",
+        "Chenyun Duan",
+        "Hao Yan",
+        "Zhaoquan Gu"
+      ],
+      "published": "2025-10-15",
+      "categories": [
+        "cs.CR"
+      ],
+      "abstract": "Rule-based network intrusion detection systems play a crucial role in the real-time detection of Web attacks. However, most existing works primarily focus on automatically generating detection rules for new attacks, often overlooking the relationships between new attacks and existing rules, which leads to significant redundancy within the ever-expanding ruleset. To address this issue, we propose GRIDAI, a novel end-to-end framework for the automated Generation and Repair of Intrusion Detection rules through collaboration among multiple LLM-based agents. Unlike traditional methods, GRIDAI first assesses the nature of incoming attack samples. If the sample represents a new attack type, it is used to generate a new rule. Otherwise, the sample is identified as a variant of an attack already covered by an existing rule and used to repair the rule by updating the corresponding signature, thereby enhancing its generalization capability. Additionally, to mitigate syntactic and semantic errors in rules caused by LLM hallucinations, we incorporate a tool-based real-time validation mechanism and a representative attack sample maintained for each rule, enabling fully automated rule generation and repair. Comprehensive experiments were conducted on a public dataset containing seven types of attacks and a private dataset with 43 attack types. The results demonstrate that GRIDAI accurately identifies the relationships between new attack samples and existing rules, efficiently generates and repairs rules to handle new attacks and variants, and effectively mitigates the impact of LLM hallucinations.",
+      "added": "2026-11-17",
+      "seed": true,
+      "tier": "thesis",
+      "score": null,
+      "reason": "It is on the reader's reading list.",
+      "card": {
+        "summary": "Autorii propun GRIDAI, un framework cu mai mulți agenți LLM care decide dacă un eșantion de atac este un tip nou sau o variantă a unuia deja acoperit. Pentru un atac nou generează o regulă nouă, iar pentru o variantă repară semnătura regulii existente, ca setul de reguli să nu se umple de redundanță. O validare cu unelte în timp real și un eșantion reprezentativ păstrat pentru fiecare regulă reduc erorile cauzate de halucinații.",
+        "evaluation": "Experimente pe un set de date public cu șapte tipuri de atacuri și pe un set privat cu 43 de tipuri de atacuri.",
+        "use": "Este relevant pentru extensia opțională cu agent LLM, adică explicarea alertelor și propunerea de reguli de blocare, și pentru capitolul de state of the art. Merită verificat în textul complet cum funcționează validarea cu unelte și cum se păstrează eșantionul reprezentativ. Verifică și dacă atacurile vizate (Web) se potrivesc cu cele low-rate, pentru că probabil nu sunt aceleași.",
+        "action": "skim",
+        "concept": {
+          "name": "Repararea regulilor (rule repair) și redundanța în setul de reguli",
+          "explanation": "Un IDS bazat pe reguli seamănă cu un fișier de filtre de spam: dacă pentru fiecare variantă nouă de mesaj adaugi o regulă separată, lista crește fără control. Repararea înseamnă să modifici semnătura unei reguli existente, ca ea să acopere și varianta nouă. Astfel setul de reguli rămâne mic și generalizează mai bine. Pentru reader contează pentru că și regulile simple din teză pot suferi de aceeași creștere."
+        },
+        "terms": [
+          {
+            "term": "LLM hallucination",
+            "meaning": "Situația în care modelul de limbaj produce conținut plauzibil, dar greșit, de exemplu o regulă cu sintaxă sau logică incorectă."
+          },
+          {
+            "term": "signature",
+            "meaning": "Tiparul concret din trafic (de exemplu un șir de octeți sau o structură de cerere) după care o regulă recunoaște un atac."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2611.20812",
+      "url": "https://arxiv.org/abs/2611.20812",
+      "title": "The Cybersecurity Dataset Observatory: Which Data for AI in Cybersecurity?",
+      "authors": [
+        "Francesco Cerasuolo",
+        "Gabriele Mangiacapre",
+        "Antonio Pescapè"
+      ],
+      "published": "2026-11-16",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "abstract": "AI is increasingly used for cybersecurity tasks such as intrusion and malware detection, in enterprise, industrial, vehicular and mobile networks. Its effectiveness depends on data: models need representative network traffic, both to be trained and to be evaluated realistically. Public datasets of cybersecurity network traffic, however, are scattered across laboratory pages, repositories and aggregators, and are continuously released, corrected and withdrawn: 92 of the 234 datasets we catalog were released in 2023 or later. At this pace, surveys that list them are outdated soon after publication, since they describe the field only as it was when they were written. We present the Cybersecurity dataset observatory, a public and continuously updated catalog of cybersecurity datasets based on network traffic. New datasets are added as they are found or submitted, every record is periodically re-checked against its original source, to which it links rather than hosting the data, and every change is recorded in a public change log. This paper documents the first release: we define a traffic-centered scope and a seven-axis taxonomy, and review 234 datasets (204 original captures and 30 derivatives) across 14 domains. The review shows a field that grows quickly but unevenly, where 91 datasets distribute only processed records, a few laboratories produce a large share of the data, and UAV, wireless and V2X networks have little public evidence, while 5G has few real captures. We then relate the catalog to common uses in AI research, outline a procedure for selecting datasets, and discuss benchmark pitfalls and open gaps.",
+      "added": "2026-11-17",
+      "seed": false,
+      "tier": "thesis",
+      "score": 7,
+      "reason": "A catalog of public network-traffic datasets and benchmark pitfalls could be cited in the thesis's datasets and state-of-the-art sections.",
+      "card": {
+        "summary": "Autorii prezintă Cybersecurity dataset observatory, un catalog public și actualizat continuu de dataset-uri de trafic de rețea pentru securitate. Prima versiune acoperă 234 de dataset-uri (204 captures originale și 30 derivate) din 14 domenii, organizate după o taxonomie cu șapte axe. 92 dintre ele au apărut în 2023 sau mai târziu, iar 91 oferă doar înregistrări procesate, nu pachete brute.",
+        "evaluation": "",
+        "use": "Poți cita lucrarea în secțiunile despre dataset-uri și state of the art, ca sursă pentru a justifica alegerea CIC-IDS2017, 2017-SUEE și CTU-SME-11. Pentru teza ta contează mai ales faptul că 91 de dataset-uri distribuie doar date procesate, deoarece tu calculezi feature-urile din raw packet captures. Verifică în textul complet dacă cele trei dataset-uri ale tale apar în catalog, cum sunt clasificate și ce spune secțiunea despre benchmark pitfalls, probabil utilă pentru discuția despre etichete corectate.",
+        "action": "skim",
+        "concept": {
+          "name": "Dataset derivat vs. captură originală",
+          "explanation": "O captură originală este traficul brut înregistrat într-un mediu (de exemplu fișiere pcap). Un dataset derivat este construit din ea sau din alte surse, de pildă prin extragere de feature-uri, relabeling sau filtrare. Este ca diferența dintre filmarea completă a unui meci și un tabel cu statistici. Pentru detecția Slowloris contează, pentru că ferestrele de timp și feature-urile tale cer pachetele brute, iar un dataset doar cu înregistrări procesate te limitează la alegerile altcuiva."
+        },
+        "terms": [
+          {
+            "term": "taxonomy",
+            "meaning": "Un sistem de clasificare a dataset-urilor după mai multe axe, aici șapte, pentru a le compara și a le căuta ușor."
+          },
+          {
+            "term": "benchmark pitfalls",
+            "meaning": "Capcane care fac o evaluare pe dataset-uri publice înșelătoare, de exemplu date nereprezentative sau etichete greșite."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2611.15073",
+      "url": "https://arxiv.org/abs/2611.15073",
+      "title": "When Does Causality Help in Multivariate Time-Series Anomaly Detection?",
+      "authors": [
+        "Long Zhang",
+        "Wei Huang",
+        "Aishui Rao",
+        "Jian Hu",
+        "Binxiang Wu",
+        "Jie Li",
+        "Chen Gong",
+        "Linxi Feng"
+      ],
+      "published": "2026-11-11",
+      "categories": [
+        "cs.LG"
+      ],
+      "abstract": "Causality-aware scoring is common in multivariate time-series anomaly detection, yet the literature rarely states when it helps. Holding one causality-guided autoencoder (DeCauAE) fixed, we vary graph quality, anomaly type and protocol against ground truth. Graph quality fixes the payoff: on a twenty-variable DAG the gain over a graph-free autoencoder decays as the graph is corrupted. Anomaly type fixes the target: the structural factor lifts window F1 from 0.800 to 0.976 where anomalies break conditional structure, and its advantage vanishes below a break severity s 0.3. Protocol fixes the ranking: point-adjusted F1 lets a random score match the full model, while range-aware VUS separates the autoencoder family from the classical baselines. On real benchmarks the causal module pays only where density makes a system eligible and cross-subsample reproducibility selects entities inside it; enabling it everywhere costs 0.012 VUS-ROC. The structural factor also transfers to classical detectors .",
+      "added": "2026-11-17",
+      "seed": false,
+      "tier": "thesis",
+      "score": 7,
+      "reason": "Careful study of when causal scoring helps in multivariate time-series anomaly detection, with explicit evaluation-protocol pitfalls (point-adjust vs. range-aware VUS), directly relevant to the thesis's evaluation methodology.",
+      "card": {
+        "summary": "Autorii țin fix un autoencoder ghidat cauzal (DeCauAE) și variază calitatea grafului, tipul anomaliei și protocolul de evaluare, față de ground truth. Pe un DAG cu douăzeci de variabile, avantajul față de un autoencoder fără graf scade pe măsură ce graful este corupt. Factorul structural urcă window F1 de la 0.800 la 0.976 când anomaliile rup structura condițională, iar avantajul dispare sub o severitate a ruperii de aproximativ 0.3. Pe benchmark-uri reale, modulul cauzal ajută doar unde densitatea face sistemul eligibil, iar activarea lui peste tot costă 0.012 VUS-ROC.",
+        "evaluation": "Window F1, point-adjusted F1, VUS-ROC și VUS range-aware. Comparația se face cu un autoencoder fără graf și cu baseline-uri clasice, pe date sintetice cu DAG de douăzeci de variabile și pe benchmark-uri reale.",
+        "use": "Este foarte util pentru capitolul de metodologie: arată că point-adjusted F1 poate face un scor aleator să egaleze modelul complet, deci merită un argument pentru metrici de tip time to detection și alarme false pe oră. Verifică în textul complet cum definesc VUS și cum arată comparația cu baseline-urile clasice, pentru a-ți justifica protocolul. Ideea cu „eligibilitatea prin densitate” și transferul factorului structural la detectori clasici merită citită cu atenție, dar probabil nu se aplică direct la features pe ferestre scurte.",
+        "action": "read",
+        "concept": {
+          "name": "Point-adjust vs. range-aware VUS",
+          "explanation": "Point-adjust consideră întregul segment anormal detectat dacă prinzi un singur punct din el. E ca și cum ai primi nota maximă la un examen după ce ai nimerit o singură întrebare. Din acest motiv un scor aleator poate arăta bine, pentru că tot nimerește câte un punct în fiecare segment lung. VUS (volume under the surface) ține cont de poziția și lungimea intervalelor și de mai multe praguri, deci penalizează detecțiile întârziate sau întâmplătoare. Pentru o teză despre atacuri slow DoS contează, fiindcă atacurile durează mult și o metrică prea îngăduitoare ascunde false alarme."
+        },
+        "terms": [
+          {
+            "term": "DAG (directed acyclic graph)",
+            "meaning": "Graf orientat fără cicluri, care aici descrie ce variabile le influențează cauzal pe celelalte."
+          },
+          {
+            "term": "conditional structure",
+            "meaning": "Relațiile dintre o variabilă și cauzele ei, adică cum depinde ea de celelalte variabile; anomaliile o pot rupe."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2611.21548",
+      "url": "https://arxiv.org/abs/2611.21548",
+      "title": "TRACE: Topological Representations for Anomaly detection through Contrastive Embeddings",
+      "authors": [
+        "Sydney Johns"
+      ],
+      "published": "2026-11-16",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "abstract": "Intrusion detectors must recognize evolving malicious behavior even when confirmed attack labels are scarce or incomplete. We present TRACE, a topology-aware graph contrastive learning framework for label-efficient intrusion detection. TRACE learns from benign system-activity graphs by combining message-passing and topological representations, then assigns anomaly scores in the same projected embedding space optimized by the contrastive objective. This design captures both local interactions and graph-scale structural deviations without using attack labels during representation learning. A labeled validation set containing benign and malicious graphs is used only to calibrate the anomaly threshold. We evaluate TRACE on StreamSpot, GraSec-IoT, and Unicorn Wget against a supervised graph neural network and the benign-only GraphCL baseline. TRACE obtains F1 scores of 0.923, 0.790, and 0.583, respectively. Compared with GraphCL, this is higher on StreamSpot (0.450) and Unicorn Wget (0.203), but lower on GraSec-IoT (0.975). The supervised model leads on StreamSpot and GraSec-IoT, whereas TRACE has the highest F1 on Unicorn Wget. The mixed results show that topology-aware benign-only learning can improve detection in some graph settings but does not provide a uniform advantage.",
+      "added": "2026-11-17",
+      "seed": false,
+      "tier": "thesis",
+      "score": 6,
+      "reason": "Benign-only, topology-aware anomaly detection for intrusion detection on graph-structured system activity is close to the thesis's unsupervised, topological-feature and evaluation themes, though it works on provenance graphs rather than network flows.",
+      "card": {
+        "summary": "Autorii propun TRACE, un framework de graph contrastive learning care învață doar din grafuri benigne de activitate de sistem, combinând message-passing cu reprezentări topologice. Scorul de anomalie se calculează în același spațiu de embedding proiectat, iar un set de validare etichetat servește doar pentru calibrarea pragului. TRACE obține F1 de 0.923 pe StreamSpot, 0.790 pe GraSec-IoT și 0.583 pe Unicorn Wget; rezultatele sunt mixte, fără un avantaj uniform.",
+        "evaluation": "Seturi de date: StreamSpot, GraSec-IoT și Unicorn Wget. Metrică: F1. Baseline-uri: o rețea neuronală de tip graph (supervizată) și GraphCL, antrenat doar pe date benigne. GraphCL are F1 0.450 pe StreamSpot, 0.203 pe Unicorn Wget și 0.975 pe GraSec-IoT. Modelul supervizat conduce pe StreamSpot și GraSec-IoT, TRACE are cel mai bun F1 pe Unicorn Wget.",
+        "use": "Pentru teză, merită ca exemplu în capitolul de state of the art: arată cum se calibrează un prag cu puține etichete și cum trăsăturile topologice ajută un detector antrenat doar pe date benigne. Lucrează pe provenance graphs, nu pe fluxuri de rețea, deci nu se compară direct cu Slowloris. În textul complet verifică cât de mare e setul de validare etichetat și dacă se raportează false alarms sau timp până la detecție, nu doar F1.",
+        "action": "skim",
+        "concept": {
+          "name": "Contrastive learning pe date benigne",
+          "explanation": "Ideea e să înveți un model să plaseze aproape în spațiul de embedding versiuni ușor modificate ale aceluiași graf și departe grafuri diferite. Seamănă cu a învăța să recunoști o față din unghiuri diferite, fără să ai nume. Dacă antrenezi doar pe date benigne, un graf malițios va ieși probabil din tiparul învățat, iar distanța față de acesta devine scorul de anomalie. Contează pentru teză pentru că e o variantă unsupervised care nu cere etichete de atac la antrenare, ca Isolation Forest sau one-class SVM."
+        },
+        "terms": [
+          {
+            "term": "message-passing",
+            "meaning": "Mecanism din graph neural networks în care fiecare nod își actualizează reprezentarea agregând informația de la vecinii săi."
+          },
+          {
+            "term": "provenance graph",
+            "meaning": "Graf care descrie relațiile dintre procese, fișiere și alte entități de sistem, folosit pentru a urmări cum s-a produs o activitate."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2611.20498",
+      "url": "https://arxiv.org/abs/2611.20498",
+      "title": "Replay-Augmented Regularisation for Class-Incremental Network Intrusion Detection: A Three-Dataset Evaluation of EWC and LwF",
+      "authors": [
+        "Mohammed Fackruddin Tusher",
+        "Muhammad Iqbal Hossain"
+      ],
+      "published": "2026-11-16",
+      "categories": [
+        "cs.CR"
+      ],
+      "abstract": "As new attack categories emerge, network intrusion detection models need to be updated; however, when fine-tuned sequentially on new classes, previous classes are forgotten, resulting in catastrophic for- getting. The three public datasets we use are UNSW-NB15, ToN-IoT and CIC-IDS2017, and for these datasets, our class-incremental intrusion detection system is built using a CNN with one-dimensional (1D) archi- tecture trained over nine sequential tasks, each of which introduces one attack category. We evaluate sequential fine-tuning without any buffe compared to Elastic Weight Consolidation (EWC) and Learning without Forgetting (LwF), both of which include a class-size-adaptive rehearsal buffer of 20% of all previous classes (from 20 to 300 samples). The hyper-parameters were selected using UNSW-NB15 and fixed for the other two datasets. On UNSW-NB15, replay improves the final accuracy of both regularisers to 73.6% (EWC) and 71.1% (LwF) compared to about 32% (no improvement over fine-tuning). LwF with replay achieves 46.1% and 91.6% final accuracy for the two frozen-configuration datasets (ToN-IoT, CIC-IDS2017) while EWC with replay achieves 23.7% and 61.9%. In order to avoid this, EWC was therefore tuned on one dataset and the other two data sets were used as test sets. It is also demonstrated that the common forgetting measure can be misleading for a model which does not learn the old classes. As the fine-tuning baseline was not re- played and all the results were based on a single seed, it is not claimed hat the regularisers provide any extra support over replay alone.",
+      "added": "2026-11-17",
+      "seed": false,
+      "tier": "thesis",
+      "score": 6,
+      "reason": "Network intrusion detection on public datasets (CIC-IDS2017, UNSW-NB15, ToN-IoT) with evaluation pitfalls such as tuning leakage, single seed and a misleading forgetting metric, which the thesis could cite, though the detector is supervised CNN rather than one-class.",
+      "card": {
+        "summary": "Autorii antrenează un 1D CNN pe nouă task-uri secvențiale (câte o categorie de atac pe task) pe UNSW-NB15, ToN-IoT și CIC-IDS2017. Compară fine-tuning simplu cu EWC și LwF, ambele cu un rehearsal buffer de 20% din clasele anterioare (20–300 de exemple). Pe UNSW-NB15, replay-ul ridică acuratețea finală la 73,6% (EWC) și 71,1% (LwF), față de aproximativ 32% fără replay. Pe ToN-IoT și CIC-IDS2017, LwF cu replay obține 46,1% și 91,6%, iar EWC cu replay 23,7% și 61,9%.",
+        "evaluation": "Seturi de date: UNSW-NB15, ToN-IoT, CIC-IDS2017. Metrici: acuratețea finală și măsura uzuală de forgetting. Baseline: sequential fine-tuning fără buffer, comparat cu EWC și LwF cu replay.",
+        "use": "Pentru teză, lucrarea e utilă ca exemplu de capcane de evaluare în NIDS: hiperparametrii reglați pe un singur set (UNSW-NB15) și apoi înghețați, un singur seed, iar măsura de forgetting poate induce în eroare când modelul nu învață deloc clasele vechi. Poate fi citată în capitolul despre starea artei sau în metodologie, ca argument pentru evaluare riguroasă. Detectorul e un CNN supervizat, deci nu se aplică direct la abordarea ta one-class. În textul complet verifică cum e definit forgetting-ul și cum e separat tuning-ul de test.",
+        "action": "skim",
+        "concept": {
+          "name": "Catastrophic forgetting",
+          "explanation": "Când un model neuronal e antrenat pe rând pe clase noi, își rescrie ponderile și pierde ce știa despre clasele vechi, ca un student care învață pentru un examen nou și uită materia de la precedentul. În detecția de intruziuni contează, deoarece apar mereu atacuri noi și modelul trebuie actualizat fără să uite cele vechi. Aici fine-tuning-ul simplu ajunge la aproximativ 32% acuratețe finală. Replay-ul, adică reluarea unor exemple vechi dintr-un buffer, e cea care îmbunătățește rezultatul."
+        },
+        "terms": [
+          {
+            "term": "Elastic Weight Consolidation (EWC)",
+            "meaning": "Metodă de regularizare care penalizează modificarea ponderilor considerate importante pentru task-urile anterioare."
+          },
+          {
+            "term": "Learning without Forgetting (LwF)",
+            "meaning": "Metodă care păstrează predicțiile modelului pentru clasele vechi, folosind ieșirile modelului anterior ca țintă (distilare)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2611.19109",
+      "url": "https://arxiv.org/abs/2611.19109",
+      "title": "ST-GAT: A Leakage-Free Spatio-Temporal Graph Attention Framework for Robust Network Intrusion Detection",
+      "authors": [
+        "Nikhil Parkar",
+        "Sanskar Pandey",
+        "Siddhi Prajapati",
+        "Suganeshwari G",
+        "Syed Ibrahim"
+      ],
+      "published": "2026-11-14",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "abstract": "Intrusion detection systems are a central defence in modern networks. Deep learning models report strong anomaly-detection results, but evaluations on standard benchmarks such as CSE-CIC-IDS-2018 are often inflated by two methodological problems: temporal leakage from overlapping sliding windows, and contamination from preprocessing fitted before the train/test split. Per-flow classifiers also ignore the spatio-temporal dependencies across sequences of network flows. We propose a Spatio-Temporal Graph Attention Network (ST-GAT) that represents traffic as a sequence of graph snapshots. It builds k-Nearest Neighbour (k-NN) edges within each window, applies multi-head Graph Attention Network (GAT) layers for spatial aggregation, and uses a Bidirectional Long Short-Term Memory (BiLSTM) network with temporal attention for sequence modelling. To prevent leakage, we use non-overlapping temporal windows (stride equal to window length) and fit all preprocessing on the training split only. We compare three class-imbalance strategies: inverse class-frequency weighting, dynamic balanced sampling, and few-shot metric prototyping. Across three random seeds, ST-GAT with inverse class weighting reached a Macro-F1 of 96.65% (+/- 0.87) and an accuracy of 99.14%. This is 14.3 percentage points higher in Macro-F1 than a per-flow Random Forest baseline (82.34%). Balanced sampling reduced Macro-F1 by 2.3 points (to 94.37%) relative to loss weighting. This suggests that aggressive resampling of small, noisy minority classes can hurt detection in heavily imbalanced traffic.",
+      "added": "2026-11-17",
+      "seed": false,
+      "tier": "thesis",
+      "score": 6,
+      "reason": "Covers intrusion detection on network flows and the leakage and preprocessing-contamination pitfalls in benchmark evaluation, which the thesis methodology could cite, though it is supervised deep learning.",
+      "card": {
+        "summary": "Autorii propun ST-GAT, un model care reprezintă traficul ca o secvență de grafuri (k-NN în fiecare fereastră, straturi GAT multi-head, apoi BiLSTM cu temporal attention). Evaluarea evită două erori: ferestrele sunt fără suprapunere, iar preprocesarea se ajustează doar pe setul de train. Cu inverse class weighting, modelul obține Macro-F1 de 96,65% (±0,87) și accuracy de 99,14%, cu 14,3 puncte peste un Random Forest per flow (82,34%).",
+        "evaluation": "Dataset: CSE-CIC-IDS-2018. Metrici: Macro-F1 și accuracy, pe trei seed-uri aleatoare. Baseline: Random Forest per flow. Sunt comparate trei strategii pentru dezechilibrul de clase: inverse class-frequency weighting, dynamic balanced sampling și few-shot metric prototyping.",
+        "use": "Partea utilă pentru teză este metodologia: ferestre fără suprapunere (stride egal cu lungimea ferestrei) și preprocesare ajustată doar pe train. O poți cita în capitolul de metodologie pentru a justifica împărțirea temporală a datelor din CIC-IDS2017. Modelul în sine este supervizat și deep learning, deci nu se potrivește tezei. În textul complet verifică cum au făcut split-ul temporal și ce anume intră în preprocesare.",
+        "action": "skim",
+        "concept": {
+          "name": "Temporal leakage din ferestre suprapuse",
+          "explanation": "Dacă ferestrele glisante se suprapun, aceleași pachete apar în ferestre vecine. Dacă o fereastră ajunge în train și vecina ei în test, modelul a văzut deja o parte din exemplul de test, ca un student care primește la examen aceleași întrebări ca la curs. Scorul iese umflat și nu arată cum va merge detectorul pe trafic nou. Pentru teza ta contează direct, deoarece și tu calculezi features pe ferestre scurte de timp."
+        },
+        "terms": [
+          {
+            "term": "Graph Attention Network (GAT)",
+            "meaning": "Rețea de grafuri în care fiecare nod își agregă vecinii cu ponderi de atenție învățate, deci vecinii nu contează la fel."
+          },
+          {
+            "term": "Few-shot metric prototyping",
+            "meaning": "Fiecare clasă rară este reprezentată printr-un prototip în spațiul de embeddings, iar un exemplu nou primește clasa celui mai apropiat prototip."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2611.21331",
+      "url": "https://arxiv.org/abs/2611.21331",
+      "title": "TRIAGE-CPG: A Cross-Model Study of Budgeted Static Malware Triage with Large Language Models",
+      "authors": [
+        "Paul-Andrei Sava",
+        "Alexander Küchler",
+        "Daniel Kowatsch",
+        "Bernhard Grill",
+        "Jennifer Pullman",
+        "Yanick Fratantonio",
+        "Luca Invernizzi"
+      ],
+      "published": "2026-11-16",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "abstract": "When triaging unknown binaries, security analysts must decide which samples to clear as benign, flag as malicious, or escalate for deeper analysis. Large Language Models (LLMs) could support these decisions by interpreting decompiled code, but a binary can contain hundreds or thousands of functions, making exhaustive LLM analysis impractical. We study how current LLMs behave when static triage is formulated as budgeted evidence acquisition: which functions they inspect and how they trade off benign clearance, malware detection, and escalation. To enable a controlled comparison, we implement TRIAGE-CPG, a fixed pipeline over a code property graph (CPG) of a decompiled binary. An LLM-free heuristic selects seed functions, an agent expands the resulting evidence dossier under a fixed budget, and a reporting stage produces a benign, suspicious, or malicious verdict together with a behavioral report. We evaluate eight closed-source and open-weight models on 1,000 Windows PE binaries, using a 600-sample test split and the same zero-shot protocol for every model. We assess the ternary verdicts under both a strict binary reading and triage balanced accuracy (tBA), which credits malware that is flagged or escalated and benign samples only when cleared. After analyzing about 40 of a mean 1,000 functions per binary, the highest-scoring model reaches a strict balanced accuracy of 0.805 and a tBA of 0.855, flagging 65% of malware, escalating another 12%, and clearing 94% of benign samples. The models implement different triage policies: high-specificity models produce small, malware-rich escalation queues, whereas recall-oriented models escalate or flag much more broadly. Both closed-source and open-weight models appear across this spectrum. Our results identify no universal deployment configuration: model choice itself determines the clear/flag/escalate trade-off under limited static evidence.",
+      "added": "2026-11-17",
+      "seed": false,
+      "tier": "field",
+      "score": 5,
+      "reason": "LLM-driven static malware triage on decompiled binaries is outside the network-traffic thesis scope and uses an LLM as the detector, but it is useful defensive ML context for a practitioner.",
+      "card": {
+        "summary": "Autorii studiază triajul static al malware-ului ca achiziție de dovezi cu buget limitat. Construiesc TRIAGE-CPG, un pipeline fix peste un code property graph (CPG) al binarului decompilat: o euristică fără LLM alege funcțiile de start, un agent extinde dosarul de dovezi, iar la final se dă verdictul benign, suspicious sau malicious. Cel mai bun din opt modele analizează cam 40 din ~1.000 de funcții per binar și obține balanced accuracy strictă 0,805 și tBA 0,855: marchează 65% din malware, escaladează alte 12% și curăță 94% din eșantioanele benigne.",
+        "evaluation": "1.000 de binare Windows PE, cu un split de test de 600 de eșantioane. Opt modele closed-source și open-weight, toate cu același protocol zero-shot. Metrici: balanced accuracy strictă (citire binară) și triage balanced accuracy (tBA).",
+        "use": "Este doar context defensiv: lucrarea nu are legătură cu traficul de rețea și folosește un LLM ca detector, ceea ce tezei tale îi este exclus. Ideea utilă este tratamentul verdictului în trei stări (clear/flag/escalate), care ar putea inspira extensia cu agent LLM care explică alertele. Verifică în textul complet cum e definit tBA, dacă te interesează evaluarea dincolo de un singur scor.",
+        "action": "note",
+        "concept": {
+          "name": "Triage balanced accuracy (tBA)",
+          "explanation": "Un analist de triaj nu alege doar între „rău” și „bun”, ci poate și să trimită un caz mai departe. tBA ține cont de asta: malware-ul contează ca detectat dacă e marcat sau escaladat, iar un eșantion benign contează doar dacă e curățat. Este ca la o triere la urgențe, unde un caz trimis la specialist nu e o greșeală. Contează aici pentru că arată cum o metrică poate reflecta costul real al deciziei, nu doar acuratețea brută."
+        },
+        "terms": [
+          {
+            "term": "code property graph (CPG)",
+            "meaning": "Un graf care combină structura sintactică, fluxul de control și fluxul de date ale unui program, pe care agentul îl parcurge pentru a găsi dovezi."
+          },
+          {
+            "term": "zero-shot",
+            "meaning": "Modelul primește sarcina fără exemple sau antrenare suplimentară pentru ea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2611.20594",
+      "url": "https://arxiv.org/abs/2611.20594",
+      "title": "Experience: ENTRAP - An IaC Enterprise Cyber Range for Reproducible Security Assessment and Dataset Generation",
+      "authors": [
+        "Rathan Appana",
+        "Aditya Kulkarni",
+        "Bheemarjuna Reddy Tamma"
+      ],
+      "published": "2026-11-16",
+      "categories": [
+        "cs.CR"
+      ],
+      "abstract": "An enterprise breach causes most of its damage after the perimeter is crossed. Once an attacker gains a foothold, they can move laterally to other hosts, take over the trusted services of the network, and encrypt the backups needed for recovery. Defenders, on the other hand, need to study this post-compromise stage, but they cannot rehearse it on a production enterprise network. Building such an enterprise network manually is time-consuming, and resetting it to its clean state between runs is still harder. As a result, security experiments are difficult to perform, compare and reproduce. We develop Enterprise Network Testbed for Reproducible Attack and Defense Practices (ENTRAP), an Infrastructure-as-Code (IaC) cyber range that defines a fully segmented enterprise as version-controlled automation. ENTRAP uses Ansible, KVM/Libvirt, and Cloud-init to provision the environment and reset it to a clean state whenever necessary. The enterprise network includes several entities such as a gateway, an internal Demilitarized Zone (DMZ), DNS, DHCP, a backup server, a web server, and clients. On this network, a user can learn to assemble the entities, launch attacks, and write rules or defensive measures that harden its security. We launch three attacks: a Ransomware-as-a-Service (RaaS)-backed ransomware campaign, a Layer-2 DHCP starvation and rogue DHCP attack, and perimeter web exploitation. Each attack runs from a clean state, and ENTRAP acts as a reproducible generator of labeled attack datasets. Using the collected dataset, we train a Random Forest classifier for ransomware detection and present its evaluation results. We publicly release the codebase, collected logs, and datasets to facilitate further research.",
+      "added": "2026-11-17",
+      "seed": false,
+      "tier": "field",
+      "score": 5,
+      "reason": "An IaC cyber range that generates labeled attack datasets is useful background for a defensive practitioner, but it centers on ransomware and DHCP attacks with a supervised Random Forest rather than DoS detection or unsupervised methods.",
+      "card": {
+        "summary": "Autorii construiesc ENTRAP, un cyber range de tip Infrastructure-as-Code (Ansible, KVM/Libvirt, Cloud-init) care definește o rețea enterprise segmentată și o poate readuce la starea curată între rulări. Pe ea rulează trei atacuri: ransomware (RaaS), DHCP starvation cu rogue DHCP și exploatare web la perimetru. Datele colectate servesc la antrenarea unui Random Forest pentru detecția ransomware-ului; codul, logurile și seturile de date sunt publice.",
+        "evaluation": "Abstractul menționează doar un clasificator Random Forest pentru ransomware, antrenat pe setul de date generat de ENTRAP, fără alte seturi de date, metrici sau baseline-uri.",
+        "use": "Este context util pentru capitolul de state of the art sau pentru metodologie, ca exemplu de generare reproductibilă de date etichetate. Ideea de resetare la starea curată ar putea inspira un mediu propriu pentru atacuri Slowloris, probabil pe un scenariu mai mic. Nu acoperă DoS lent și nici metode nesupervizate, așa că în textul complet merită verificat doar cum sunt colectate și etichetate capturile.",
+        "action": "skim",
+        "concept": {
+          "name": "Infrastructure-as-Code (IaC) pentru cyber range",
+          "explanation": "IaC înseamnă că toată rețeaua de test este descrisă în fișiere de cod, ținute în versionare, nu configurată manual. Este ca o rețetă de bucătărie: oricând poți reface exact același fel de mâncare. Pentru experimente de securitate contează mult, pentru că rularea se repornește de la aceeași stare curată, iar rezultatele pot fi comparate și reproduse. Într-o teză, așa poți genera date etichetate de același tip, de câte ori ai nevoie."
+        },
+        "terms": [
+          {
+            "term": "DHCP starvation",
+            "meaning": "Atac care epuizează adresele IP disponibile ale serverului DHCP prin cereri false, astfel încât clienții legitimi nu mai primesc adresă."
+          },
+          {
+            "term": "Ransomware-as-a-Service (RaaS)",
+            "meaning": "Model în care dezvoltatorii de ransomware închiriază infrastructura și instrumentele altor atacatori."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2611.19295",
+      "url": "https://arxiv.org/abs/2611.19295",
+      "title": "Optional Traps: An Empirical Study of LLM Agents Against Credential Deception and Alert-Driven Revocation",
+      "authors": [
+        "Raditio Ghifiardi"
+      ],
+      "published": "2026-11-14",
+      "categories": [
+        "cs.CR"
+      ],
+      "abstract": "Deception (honeypots, decoys and canary credentials) rests on a simple premise: legitimate users never touch a fake asset, so any touch is a high-confidence signal. We ask whether that premise holds when the attacker is a large language model (LLM) agent, and what deception contributes once ordinary hardening is in place. We built an isolated, hash-chained lab around a mock Records API and report four studies. (1) In an exploratory run, a local 9.7B-parameter model ignored every optional decoy, read a genuinely leaked service key from a debug endpoint and exported the protected records in both static and adaptive deception modes. (2) After removing the leak, planting a canary credential in its place and revoking the offending client, a frozen 60-session study with a 4B-parameter model found export success of 20/20 at baseline, 0/20 with hardening alone and 0/20 with hardening plus deception (exact paired McNemar p = 1.9e-6 baseline vs. defended; p = 1 hardened vs. defended). Deception added detection and per-client revocation in 19 of 20 defended sessions, but no measurable prevention beyond hardening. (3) On Google Cloud, a real OpenCanary login alert was authenticated, signed and turned into revocation of the attacking client; the first denied export followed within an observed upper bound of 303 ms, a separate legitimate client completed 100/100 requests, and all 14 control checks passed. (4) In multi-agent swarm engagements, agents that used the canary were revoked 39-59 s after the bait was served without affecting siblings, but one model-driven legitimate agent also took the bait, a false-positive risk specific to LLM clients. Against LLM agents, traps must sit on the attacker's path rather than beside it, closing real weaknesses does the preventive work, and deception's measurable value is fast, attributable detection. All results are lab-scale and are not a production claim.",
+      "added": "2026-11-17",
+      "seed": false,
+      "tier": "field",
+      "score": 5,
+      "reason": "Defensive deception and alert-driven revocation against LLM attackers is practitioner-relevant SOC and web-defense work, but it is not traffic anomaly detection or DoS detection, so it fits field rather than thesis.",
+      "card": {
+        "summary": "Autorii testează într-un laborator izolat dacă premisa deception-ului (nimeni legitim nu atinge un asset fals) rămâne valabilă când atacatorul este un agent LLM. Într-un studiu cu 60 de sesiuni și un model de 4B parametri, exportul de date a reușit în 20/20 sesiuni la baseline și în 0/20 cu hardening singur sau cu hardening plus deception. Deception a adăugat detecție și revocare per client în 19 din 20 sesiuni, dar nicio prevenție suplimentară.",
+        "evaluation": "Un lab izolat cu un mock Records API, patru studii: o rulare exploratorie cu un model local de 9.7B, un studiu înghețat de 60 de sesiuni cu un model de 4B (test McNemar exact pe perechi), o validare pe Google Cloud cu alertă reală OpenCanary și engagement-uri multi-agent swarm. Metrici: succesul exportului, detecția, revocarea per client, latența până la primul export refuzat (sub 303 ms) și 100/100 cereri legitime reușite.",
+        "use": "Nu e legat direct de teza ta, dar arată cum poți trata alertele ca semnal de înaintare spre blocare automată, o idee utilă pentru extensia cu agent LLM care propune reguli. Merită reținut că valoarea deception-ului e detecția rapidă și atribuibilă, nu prevenția. În textul complet verifică cât de mari sunt eșantioanele și cum e definit fals-pozitivul al agentului legitim, deoarece rezultatele sunt doar la scară de laborator.",
+        "action": "note",
+        "concept": {
+          "name": "Canary credential",
+          "explanation": "Este o credențială falsă plasată într-un loc unde doar un atacator ar ajunge să o folosească, ca un portofel-momeală cu alarmă în el. Orice utilizare a ei declanșează o alertă cu încredere mare, fiindcă un utilizator legitim n-ar avea motiv să o atingă. Aici contează pentru că alerta poate declanșa direct revocarea clientului care a folosit-o. Studiul arată însă că un agent LLM legitim poate cădea și el în capcană, deci premisa nu e perfectă."
+        },
+        "terms": [
+          {
+            "term": "McNemar test",
+            "meaning": "Test statistic pentru date perechi binare, care compară dacă două condiții dau rezultate diferite pe aceleași sesiuni."
+          },
+          {
+            "term": "Hardening",
+            "meaning": "Închiderea slăbiciunilor reale ale sistemului, de exemplu eliminarea unei chei scurse printr-un endpoint de debug."
+          }
+        ]
+      }
+    }
+  ]
+}
