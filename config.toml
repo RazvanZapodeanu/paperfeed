@@ -1,0 +1,76 @@
+# arXiv search queries. A paper is a candidate if it matches any of them.
+# Syntax: https://info.arxiv.org/help/api/user-manual.html#query_details
+queries = [
+    "cat:cs.CR",
+    'cat:cs.NI AND (abs:security OR abs:attack OR abs:attacks OR abs:anomaly OR abs:anomalies OR abs:intrusion OR abs:DDoS OR abs:malicious OR abs:malware)',
+    'cat:cs.LG AND (abs:"anomaly detection" OR abs:"outlier detection" OR abs:"intrusion detection" OR abs:"network traffic")',
+]
+lookback_days = 7
+keep_days = 30
+
+# A cheap model reads every abstract, a better one writes the few cards.
+screen_model = "claude-haiku-5-5"
+card_model = "claude-sonnet-5-5"
+language = "Romanian"
+
+# Reading list. Each of these gets a card on the first run, and both models see
+# their titles.
+seeds = [
+    "2205.07109", # Unsupervised Abnormal Traffic Detection through Topological Flow Analysis
+    "2503.17867", # Detecting and Mitigating DDoS Attacks with AI: A Survey
+    "2404.04064", # Fusing Dictionary Learning and SVMs for Unsupervised Anomaly Detection
+    "1802.09089", # Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection
+    "1803.03639", # Precision and Recall for Time Series
+    "2109.05257", # Towards a Rigorous Evaluation of Time-series Anomaly Detection
+    "2510.13257", # GRIDAI: Generating and Repairing Intrusion Detection Rules
+]
+
+# Both models get this text. The more concrete it is, the better they judge
+# what is useful.
+reader = """
+A final-year computer science student heading towards defensive security with
+applied machine learning.
+
+Bachelor thesis: detecting low-rate and slow denial-of-service attacks (such as
+Slowloris) in real network traffic, with unsupervised anomaly detection combined
+with simple rules. Isolation Forest is the baseline, compared with one-class SVM,
+LOF and DL-OCSVM, which is the supervisor's own method (dictionary learning
+combined with a one-class SVM). No deep learning and no LLM as the detector.
+Features are statistics over short time windows, computed from raw packet
+captures. Datasets: CIC-IDS2017 with corrected labels, 2017-SUEE and CTU-SME-11.
+Detectors are judged by time to detection and false alarms per hour rather than
+by a single F1 score. A possible extension is an LLM agent that explains alerts
+and proposes blocking rules.
+
+Thesis chapters: introduction, state of the art, methodology, implementation,
+results, conclusions. Machine learning concepts are worth explaining from first
+principles."""
+
+# Papers under this score never get a card.
+min_score = 5
+
+# New cards per day, at most. Papers over the limit wait for a later day, as
+# long as they are within the lookback window.
+[per_day]
+thesis = 5
+field = 3
+
+[tiers]
+thesis = """
+Could be cited or used in the thesis: anomaly or intrusion detection in network
+traffic, detection of DoS and of slow or low-rate attacks, unsupervised or
+one-class methods that work on tabular traffic features, graph or topological
+features of traffic, network traffic datasets (such as the ones above) and their
+flaws like label errors and data leakage, how anomaly detectors should be
+evaluated (metrics, protocols, benchmark pitfalls), and LLMs that explain alerts
+or write detection rules."""
+field = """
+Not for the thesis, but worth knowing for defensive work with machine learning:
+detection engineering, SOC automation, network and web defenses, digital
+forensics, malware and traffic analysis, measurement studies of real attacks.
+Only papers a practitioner would want to hear about."""
+skip = """
+Everything else. In particular attacks on AI models and AI safety (jailbreaks,
+prompt injection, unlearning, backdoors), cryptography, blockchain, privacy and
+federated learning theory, wireless and 5G optimization, hardware security, and
+purely offensive work."""

@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+
+# local feed; the published one lives on the data branch
+data/
