@@ -1,12 +1,33 @@
 const SKIP = new Set([
-  "a", "an", "and", "are", "by", "do", "does", "for", "from", "how", "in", "is",
-  "of", "on", "the", "to", "toward", "towards", "via", "what", "when", "why", "with",
+  "a",
+  "an",
+  "and",
+  "are",
+  "by",
+  "do",
+  "does",
+  "for",
+  "from",
+  "how",
+  "in",
+  "is",
+  "of",
+  "on",
+  "the",
+  "to",
+  "toward",
+  "towards",
+  "via",
+  "what",
+  "when",
+  "why",
+  "with",
 ]);
 
 function plain(text) {
   return text
     .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
+    .replace(/\p{M}/gu, "")
     .toLowerCase()
     .replace(/[^a-z0-9]/g, "");
 }

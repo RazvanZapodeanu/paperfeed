@@ -14,7 +14,7 @@ const toastBox = document.querySelector(".toast");
 const touch = matchMedia("(pointer: coarse)");
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 
-let state = load();
+const state = load();
 let status = state.feed ? "ok" : "loading";
 let lastAction = null;
 let toastTimer;
@@ -44,7 +44,12 @@ function button(label, iconName, onclick, extra = {}) {
 }
 
 function arxivLink(paper) {
-  return h("a", { class: "act quiet", href: arxivUrl(paper), target: "_blank", rel: "noopener" }, icon("open"), "arXiv");
+  return h(
+    "a",
+    { class: "act quiet", href: arxivUrl(paper), target: "_blank", rel: "noopener" },
+    icon("open"),
+    "arXiv",
+  );
 }
 
 // The feed is generated from untrusted abstracts, so only ever link to arXiv.
@@ -79,21 +84,37 @@ function page(paper) {
   return h(
     "article",
     { class: "page" },
-    h("a", { class: "stamp", href: arxivUrl(paper), target: "_blank", rel: "noopener" }, stamp(paper)),
+    h(
+      "a",
+      { class: "stamp", href: arxivUrl(paper), target: "_blank", rel: "noopener" },
+      stamp(paper),
+    ),
     h("h1", { class: "title" }, paper.title),
     h("p", { class: "authors" }, authors(paper.authors)),
     h("p", { class: "verdict" }, `${source}, ${ACTION[card.action]}.`),
     paragraph("Pe scurt", card.summary),
     paragraph("Evaluare", card.evaluation),
     paragraph("Ce faci cu el", card.use),
-    h("div", { class: "concept" }, h("p", {}, h("b", {}, "Concept"), ` (${card.concept.name}). `, card.concept.explanation)),
+    h(
+      "div",
+      { class: "concept" },
+      h("p", {}, h("b", {}, "Concept"), ` (${card.concept.name}). `, card.concept.explanation),
+    ),
     card.terms.length > 0 &&
-      h("ul", { class: "terms" }, card.terms.map((t) => h("li", {}, h("i", {}, t.term), `: ${t.meaning}`))),
+      h(
+        "ul",
+        { class: "terms" },
+        card.terms.map((t) => h("li", {}, h("i", {}, t.term), `: ${t.meaning}`)),
+      ),
   );
 }
 
 function endPage(title, text, ...extra) {
-  return h("div", { class: "deck" }, h("section", { class: "page end" }, h("h1", {}, title), h("p", {}, text), ...extra));
+  return h(
+    "div",
+    { class: "deck" },
+    h("section", { class: "page end" }, h("h1", {}, title), h("p", {}, text), ...extra),
+  );
 }
 
 function unread() {
@@ -173,7 +194,9 @@ function renderDeck(cards) {
     h("span", { class: "swipe read", "aria-hidden": "true" }, "Citit"),
     page(paper),
   );
-  main.replaceChildren(h("div", { class: "deck", "data-left": Math.min(cards.length - 1, 2) }, card));
+  main.replaceChildren(
+    h("div", { class: "deck", "data-left": Math.min(cards.length - 1, 2) }, card),
+  );
   swipeable(card, paper);
 
   actions.replaceChildren(
@@ -182,7 +205,10 @@ function renderDeck(cards) {
       { class: "row" },
       button("Citit", "check", () => fling(card, "read", paper), { title: "Citit (C)" }),
       arxivLink(paper),
-      button("Salvează", "save", () => fling(card, "save", paper), { title: "Salvează (S)", class: "act primary" }),
+      button("Salvează", "save", () => fling(card, "save", paper), {
+        title: "Salvează (S)",
+        class: "act primary",
+      }),
     ),
   );
 }
@@ -213,7 +239,9 @@ function renderSaved() {
 
   main.replaceChildren(h("div", { class: "deck" }, h("section", { class: "page list" }, content)));
   actions.replaceChildren(
-    ...(papers.length ? [h("div", { class: "row single" }, button("Descarcă BibTeX", "download", download))] : []),
+    ...(papers.length
+      ? [h("div", { class: "row single" }, button("Descarcă BibTeX", "download", download))]
+      : []),
   );
 }
 
@@ -231,7 +259,10 @@ function renderSavedPaper(id) {
       { class: "row" },
       button("Scoate", "remove", () => remove(paper), { title: "Scoate din salvate" }),
       arxivLink(paper),
-      button("BibTeX", "copy", () => copy(paper), { title: "Copiază BibTeX", "aria-label": "Copiază BibTeX" }),
+      button("BibTeX", "copy", () => copy(paper), {
+        title: "Copiază BibTeX",
+        "aria-label": "Copiază BibTeX",
+      }),
     ),
   );
 }
@@ -291,7 +322,10 @@ function download() {
 
 function toast(message, onUndo) {
   clearTimeout(toastTimer);
-  toastBox.replaceChildren(h("span", {}, message), onUndo && h("button", { type: "button", onclick: onUndo }, "Anulează"));
+  toastBox.replaceChildren(
+    h("span", {}, message),
+    onUndo && h("button", { type: "button", onclick: onUndo }, "Anulează"),
+  );
   toastBox.hidden = false;
   toastTimer = setTimeout(() => (toastBox.hidden = true), 5000);
 }
@@ -407,7 +441,8 @@ async function refresh() {
 
 addEventListener("hashchange", render);
 document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "visible" && Date.now() - state.fetchedAt > REFRESH_AFTER) refresh();
+  if (document.visibilityState === "visible" && Date.now() - state.fetchedAt > REFRESH_AFTER)
+    refresh();
 });
 
 render();
