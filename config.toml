@@ -5,7 +5,8 @@ queries = [
     'cat:cs.NI AND (abs:security OR abs:attack OR abs:attacks OR abs:anomaly OR abs:anomalies OR abs:intrusion OR abs:DDoS OR abs:malicious OR abs:malware)',
     'cat:cs.LG AND (abs:"anomaly detection" OR abs:"outlier detection" OR abs:"intrusion detection" OR abs:"network traffic")',
 ]
-lookback_days = 7
+# A week, plus the few days arXiv can take to announce a paper after it is submitted.
+lookback_days = 10
 keep_days = 30
 
 # A cheap model reads every abstract, a better one writes the few cards.
@@ -47,13 +48,13 @@ results, conclusions. Machine learning concepts are worth explaining from first
 principles."""
 
 # Papers under this score never get a card.
-min_score = 5
+min_score = 6
 
-# New cards per day, at most. Papers over the limit wait for a later day, as
-# long as they are within the lookback window.
+# New cards per day, at most. The feed runs weekly, so this is the week's shortlist;
+# papers over the limit wait for the next run while they are within the lookback window.
 [per_day]
-thesis = 5
-field = 3
+thesis = 6
+field = 2
 
 [tiers]
 thesis = """

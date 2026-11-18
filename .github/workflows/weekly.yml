@@ -1,16 +1,16 @@
-name: Daily feed
+name: Weekly feed
 
 on:
   schedule:
-    # 05:37 and 11:37 UTC. The second run is a retry: it has nothing left to do
-    # if the first one went through.
-    - cron: "37 5,11 * * *"
+    # Saturdays at 05:37 and 11:37 UTC. The second run is a retry: it has nothing
+    # left to do if the first one went through.
+    - cron: "37 5,11 * * 6"
   workflow_dispatch:
 
 permissions:
   contents: write
 
-concurrency: daily-feed
+concurrency: weekly-feed
 
 jobs:
   update:

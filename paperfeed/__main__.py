@@ -7,7 +7,7 @@ from . import pipeline
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(prog="paperfeed", description="Build the daily paper feed.")
+    parser = argparse.ArgumentParser(prog="paperfeed", description="Build the paper feed.")
     parser.add_argument(
         "--dry-run",
         action="store_true",

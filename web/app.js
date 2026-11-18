@@ -178,8 +178,8 @@ function renderDeck(cards) {
     const saved = state.saved.length;
     main.replaceChildren(
       endPage(
-        "Ai terminat pentru azi.",
-        "Cardurile noi apar în fiecare dimineață.",
+        "Ai terminat pentru săptămâna asta.",
+        "Cardurile noi apar sâmbătă dimineața.",
         saved > 0 && h("a", { class: "act", href: "#salvate" }, `Vezi salvatele (${saved})`),
       ),
     );
