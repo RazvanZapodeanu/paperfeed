@@ -20,6 +20,20 @@ into short study cards I can read on my phone.
 
 Everything that decides what ends up in the feed is in `config.toml`.
 
+## App
+
+`web/` is a small installable web app for reading the feed, on the phone or the
+laptop. It shows one card at a time: save it or mark it as read, and the deck ends
+when the day's cards do. Saved papers stay on the device and export to BibTeX.
+
+It reads `feed.json` straight from the `data` branch, works offline with the last
+feed it saw, and has no build step: GitHub Pages deploys the folder as it is. To try
+it locally:
+
+```
+python -m http.server --directory web
+```
+
 ## Setup
 
 Needs Python 3.11 or newer.
