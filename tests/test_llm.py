@@ -11,6 +11,8 @@ from paperfeed import llm
         ("  Extra whitespace.\n", "Extra whitespace."),
         ("A real aside (like this one)", "A real aside (like this one)"),
         ("(a) and b)", "(a) and b"),
+        ("Two periods..", "Two periods."),
+        ("An ellipsis...", "An ellipsis..."),
     ],
 )
 def test_tidy(raw, clean):
