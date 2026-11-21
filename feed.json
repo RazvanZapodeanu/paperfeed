@@ -1,6 +1,307 @@
 {
-  "updated": "2026-11-17T19:04:48+00:00",
+  "updated": "2026-11-21T13:41:16+00:00",
   "cards": [
+    {
+      "id": "2611.17534",
+      "url": "https://arxiv.org/abs/2611.17534",
+      "title": "I2C-GRPO: Insight Importance Checklist for Reinforcement Learning in a Multi-Agent DDoS Alert Triage Workflow",
+      "authors": [
+        "Eyal Zloof",
+        "Shaun Shuster",
+        "Aviram Zilberman",
+        "Chen Frydman",
+        "Inderjeet Singh",
+        "Andrés Murilo",
+        "Asaf Shabtai",
+        "Yuval Elovici",
+        "Rami Puzis"
+      ],
+      "published": "2026-11-12",
+      "categories": [
+        "cs.CR"
+      ],
+      "abstract": "Large language model (LLM) agents are increasingly used for investigative tasks over incomplete evidence, such as cybersecurity alert triage, but reinforcement learning (RL) for such tasks is difficult: intermediate steps have no verifiable labels, rollouts are costly, and outcome rewards are sparse. We propose Insight Importance Checklist (I2C)-GRPO, a checklist reward for intermediate investigation steps. For each decision point, a panel of expert LLMs proposes investigative actions, their atomic forensic insights are extracted, and a separate three-model ranker panel orders the insights by importance. A reward model checks which ranked insights a candidate action targets and returns their consensus-weighted coverage. Because actions are scored without being executed, the reward is a proxy for expected investigative value, and training reduces to a one-step contextual bandit over fixed investigation prefixes. From a soft-computing perspective, the reward is an additive fuzzy measure whose rank-exponent weights act as an ordered weighted averaging (OWA)-type operator; one exponent sets its orness, i.e., how strongly the reward concentrates on the top of the judges' consensus. We train an open-weight Qwen3-4B Triage Agent within a fixed multi-agent Distributed Denial of Service (DDoS) alert-triage workflow on DARPA 2000 LLDOS 1.0 and test it on an independent CSE-CIC-IDS2018 DDoS trace. Across three training seeds, the agent reaches a mean F1-score of 0.869, 5.9 and 9.7 points above uniform insight weights and DIVA, and a false-positive rate of 4.9% versus 16.4% for GPT-5-mini. Within the weighting family, false positives fall only at the highest-orness weighting evaluated. All claims are limited to DDoS alert triage; the code, task contexts, and ranked insight dataset will be released.",
+      "added": "2026-11-21",
+      "seed": false,
+      "tier": "thesis",
+      "score": 6,
+      "reason": "It studies an LLM agent that triages DDoS alerts on network data, which bears on the thesis's possible LLM alert-explanation extension, though its core is RL reward design rather than detection.",
+      "card": {
+        "summary": "Autorii antrenează prin reinforcement learning un agent LLM open-weight (Qwen3-4B) pentru triajul alertelor DDoS, folosind o reward de tip checklist (I2C-GRPO) pentru pașii intermediari ai investigației. Antrenat pe DARPA 2000 LLDOS 1.0 și testat pe un trace CSE-CIC-IDS2018, agentul ajunge la un F1 mediu de 0.869 (cu 5.9 și 9.7 puncte peste ponderi uniforme și DIVA) și la 4.9% false-positive rate, față de 16.4% pentru GPT-5-mini.",
+        "evaluation": "Antrenare pe DARPA 2000 LLDOS 1.0, test pe un trace DDoS independent din CSE-CIC-IDS2018, pe trei seed-uri. Metrici: F1 și false-positive rate. Baseline-uri: ponderi uniforme ale insight-urilor, DIVA și GPT-5-mini.",
+        "use": "Este relevant pentru extensia opțională cu agent LLM care explică alertele, nu pentru detectorii din teza ta. Poți cita lucrarea la state of the art ca exemplu de triaj de alerte cu LLM și îți arată cum se măsoară false positives (4.9% vs 16.4%), în ton cu metrica ta de false alarms. Verifică în textul complet ce intră în workflow-ul multi-agent și cât de departe de datele tale (CIC-IDS2017) sunt traceurile folosite.",
+        "action": "skim",
+        "concept": {
+          "name": "Contextual bandit cu reward de tip checklist",
+          "explanation": "Un contextual bandit este o problemă de decizie într-un singur pas: vezi un context, alegi o acțiune și primești imediat o recompensă, fără lanț de pași după. Gândește-te la un examen cu barem: nu contează dacă rezolvarea ajunge la rezultatul final, ci câte puncte din barem le atingi. Aici baremul este lista de insight-uri forensice ordonate după importanță, iar reward-ul este cât din ele vizează acțiunea propusă, fără s-o execute. Astfel se evită reward-ul sparse de la finalul investigației."
+        },
+        "terms": [
+          {
+            "term": "GRPO",
+            "meaning": "Metodă de RL pentru LLM-uri care compară mai multe răspunsuri generate pentru același context și le folosește relativ unul la altul, fără un model de valoare separat (probabil în stilul Group Relative Policy Optimization)."
+          },
+          {
+            "term": "OWA (ordered weighted averaging)",
+            "meaning": "Operator de agregare care aplică ponderi pe poziția în clasament, nu pe elementul în sine, deci poate concentra reward-ul pe vârful consensului judecătorilor."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2611.21473",
+      "url": "https://arxiv.org/abs/2611.21473",
+      "title": "Network Intrusion Detection Adaptability under Spurious Labels: A Noise-Aware Few-Shot Class-Incremental Learning Framework",
+      "authors": [
+        "Zijian Zhao",
+        "Davide Di Monda",
+        "Domenico Ciuonzo",
+        "Yipeng Wang",
+        "Antonio Pescapè"
+      ],
+      "published": "2026-11-16",
+      "categories": [
+        "cs.NI",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "abstract": "Network Intrusion Detection Systems (NIDSs) must incrementally adapt to emerging attacks, even when only a limited amount of labeled network traffic is available. Consequently, Few-Shot Class-Incremental Learning (FSCIL)-based NIDSs have gained growing attention. However, existing FSCIL-based NIDSs are highly vulnerable to label noise in newly-observed attack classes. To address this limitation, we propose NAFN, a noise-aware FSCIL-based NIDS framework that reduces the impact of mislabeled data during incremental adaptation. NAFN consists of two components: (i) Noise Detection, which identifies and removes mislabeled biflows using noise-detection algorithms, and (ii) Feature Sampling, which estimates class-conditional embeddings from clean biflows, calibrates them with base-class statistics, and resamples synthetic features to recover the original biflow count. The framework follows the Rethink Few-Shot (RFS) teacher-student paradigm with lightweight nearest-neighbor or logistic regression classifiers, and various pretraining & memory selection strategies. Experiments on CSE-CIC-IDS2018, Edge-IIoT, and IoT-NID datasets show that NAFN effectively preserves prior knowledge and maintains strong incremental performance even under 50% label noise, consistently improving new-class F1-scores over non-denoised baselines, up to +52%, while being time-efficient and robust in cross-network and high-noise incremental settings. The implementation is publicly available to foster reproducibility.",
+      "added": "2026-11-21",
+      "seed": false,
+      "tier": "thesis",
+      "score": 6,
+      "reason": "Network intrusion detection under label noise on network-flow datasets, close to the thesis topic of label errors in traffic data, though it is supervised few-shot rather than unsupervised.",
+      "card": {
+        "summary": "Autorii propun NAFN, un cadru de NIDS bazat pe Few-Shot Class-Incremental Learning (FSCIL), care rezistă la etichete greșite în clasele noi de atac. Mai întâi elimină biflow-urile etichetate greșit cu algoritmi de noise detection, apoi estimează embedding-uri din datele curate și generează features sintetice ca să recupereze numărul inițial de biflow-uri. NAFN păstrează cunoștințele anterioare chiar și la 50% label noise și crește F1 pe clasele noi față de baseline-urile fără denoising cu până la +52%.",
+        "evaluation": "Datasets: CSE-CIC-IDS2018, Edge-IIoT și IoT-NID. Metrica numită este F1-score pe clasele noi. Baseline-urile sunt variantele fără denoising (non-denoised baselines).",
+        "use": "Pentru teza ta, e util ca argument în state of the art: etichetele greșite din datele de trafic dăunează serios detecției, iar curățarea lor ajută. Ai nevoie doar de ideea de noise detection pe flow-uri, fiindcă metoda în sine e supervizată și incrementală, deci diferă de Isolation Forest sau DL-OCSVM. În textul complet verifică ce algoritmi de noise detection folosesc și cum injectează zgomotul, pentru a face o paralelă cu corecțiile de etichete din CIC-IDS2017.",
+        "action": "skim",
+        "concept": {
+          "name": "Label noise (etichete greșite)",
+          "explanation": "Label noise înseamnă că unele exemple din datele de antrenare au eticheta greșită, de exemplu trafic benign marcat ca atac. E ca un profesor care corectează greșit o parte din lucrări: elevul învață reguli false. În securitate contează mult, pentru că atacurile noi au puține exemple, iar câteva etichete greșite pot strica tot ce se învață despre clasă. La tine apare în datele CIC-IDS2017, unde etichetele originale aveau erori, de aceea folosești versiunea corectată."
+        },
+        "terms": [
+          {
+            "term": "Few-Shot Class-Incremental Learning (FSCIL)",
+            "meaning": "Modelul învață clase noi de atac din foarte puține exemple etichetate, fără să uite clasele învățate înainte."
+          },
+          {
+            "term": "biflow",
+            "meaning": "Un flow bidirecțional de rețea, care grupează pachetele dintre două capete în ambele sensuri într-o singură înregistrare."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2611.25832",
+      "url": "https://arxiv.org/abs/2611.25832",
+      "title": "RAVEN: A Self-RAG Based Agent for Threat Classification and Response",
+      "authors": [
+        "Pironti Francesco Aurelio",
+        "Arena Luigi",
+        "Blefari Francesco",
+        "Lupinacci Matteo",
+        "Romeo Francesco",
+        "Furfaro Angelo"
+      ],
+      "published": "2026-11-19",
+      "categories": [
+        "cs.CR"
+      ],
+      "abstract": "Security event analysis in large enterprises can be overwhelming, as each alert typically requires manual in- spection by human operators. This process is time-consuming and prone to inconsistencies, especially in high-volume Secu- rity Operations Center (SOC) environments. In this work- in-progress paper, we present RAVEN: Retrieval-Augmented Vulnerability & Event aNalysis, an agentic framework designed to support SOC analysts by automating the initial stages of alert investigation. The proposed system leverages a Self- Reflective Retrieval-Augmented Generation-based approach to provide an initial classification of security events and enables interactive refinement through analyst-in-the-loop queries. Un- like traditional approaches that rely on generic mitigation strategies, RAVEN generates context-aware remediation sug- gestions by incorporating knowledge of the target enterprise infrastructure. We implement an early-stage prototype and report preliminary results on three balanced test sets of 400 curated web payloads each (SQLi, XSS, SSTI) and a qualitative case study of mitigation generation; an evaluation on IDS- generated alerts and a user study are ongoing and outlined as remaining work.",
+      "added": "2026-11-21",
+      "seed": false,
+      "tier": "thesis",
+      "score": 6,
+      "reason": "Uses an LLM agent to classify security alerts and generate remediation, which matches the thesis's listed LLM-for-alert-explanation extension, though it is an early prototype on web payloads rather than network DoS traffic.",
+      "card": {
+        "summary": "Autorii prezintă RAVEN, un agent bazat pe Self-Reflective Retrieval-Augmented Generation, care face o clasificare inițială a alertelor de securitate și permite analistului să rafineze rezultatul prin întrebări. Sistemul propune remedieri adaptate infrastructurii întreprinderii, nu strategii generice. Este un prototip timpuriu, testat pe trei seturi echilibrate de câte 400 de payload-uri web (SQLi, XSS, SSTI), plus un studiu de caz calitativ; abstractul nu dă cifre de performanță.",
+        "evaluation": "Trei seturi de test echilibrate, fiecare cu 400 de payload-uri web curate (SQLi, XSS, SSTI), și un studiu de caz calitativ despre generarea de remedieri. Evaluarea pe alerte generate de IDS și un studiu cu utilizatori sunt încă în desfășurare.",
+        "use": "Îți poate folosi la extensia ta opțională, agentul LLM care explică alertele și propune reguli de blocare, mai ales în capitolul state of the art sau în concluzii, la direcții viitoare. Verifică în textul complet cum se construiește baza de cunoștințe despre infrastructură și cum se face bucla de reflecție. Nu uita că lucrează pe payload-uri web, nu pe trafic DoS de rețea, deci este doar o inspirație de arhitectură.",
+        "action": "skim",
+        "concept": {
+          "name": "Self-Reflective Retrieval-Augmented Generation (Self-RAG)",
+          "explanation": "Un LLM obișnuit răspunde din ce a memorat la antrenare, uneori inventând detalii. RAG îi adaugă o căutare în documente, ca atunci când verifici o carte înainte de a răspunde. Varianta self-reflective merge mai departe: modelul își evaluează singur dacă documentele găsite sunt utile și dacă răspunsul are suport în ele, și reia căutarea dacă nu. Pentru alerte de securitate contează, pentru că o explicație sau o regulă de blocare inventată poate face rău."
+        },
+        "terms": [
+          {
+            "term": "SOC (Security Operations Center)",
+            "meaning": "Echipa și centrul din organizație care monitorizează alertele de securitate și reacționează la incidente."
+          },
+          {
+            "term": "analyst-in-the-loop",
+            "meaning": "Un om validează sau rafinează rezultatele sistemului, prin întrebări și corecții, în loc ca sistemul să decidă singur."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2611.23669",
+      "url": "https://arxiv.org/abs/2611.23669",
+      "title": "FlowSH: Detecting Web Attacks by Correlating Anomalous Network Flows and Endpoint Logs",
+      "authors": [
+        "Nuno Durão",
+        "Rodrigo Branco",
+        "Vinicius V. Cogo",
+        "Ibéria Medeiros"
+      ],
+      "published": "2026-11-18",
+      "categories": [
+        "cs.CR"
+      ],
+      "abstract": "Web applications compose the core of internet services, rendering them prominent targets for audacious attackers. Among web attacks, SQL injection (SQLi) remains a persistent, damaging web applications connected to databases. The widespread adoption of HTTPS has been a critical advancement for online security, ensuring the confidentiality and integrity of communications by encrypting network payloads. However, it also renders traditional Network Intrusion Detection Systems (NIDS) less effective, as these typically rely on packet inspection of plaintext traffic. To access encrypted payloads, some NIDS resort to TLS-interception proxies, which leads to data leaks and security risks. This paper presents FlowSH, a system for detecting web attacks that is agnostic to whether the traffic is encrypted (HTTPS) or not (HTTP). Rather than decrypting packets in transit, FlowSH correlates flow-level metadata (NetFlows) with endpoint logs, which inherently contain decrypted payloads after reaching the web server. The system combines unsupervised machine learning to flag anomalous NetFlows and similarity search over server-side logs using Locality Sensitive Hashing (LSH) to confirm attacks. We implemented and evaluated FlowSH in a testbed with multiple web scanners and demonstrated its detection effectiveness, detecting 70% of SQLi attacks missed by ModSecurity, a leading web application firewall.",
+      "added": "2026-11-21",
+      "seed": false,
+      "tier": "thesis",
+      "score": 6,
+      "reason": "Unsupervised anomaly detection on NetFlow metadata for intrusion detection is close to the thesis's flow-feature anomaly detection work, though the focus is SQLi rather than DoS.",
+      "card": {
+        "summary": "Autorii propun FlowSH, un sistem care detectează atacuri web (în special SQLi) fără să decripteze traficul HTTPS. Folosește unsupervised machine learning pe NetFlow pentru a marca flow-urile anormale, apoi Locality Sensitive Hashing (LSH) peste log-urile serverului pentru a confirma atacul. În testbed, cu mai multe web scanners, a detectat 70% dintre atacurile SQLi ratate de ModSecurity.",
+        "evaluation": "Un testbed cu mai multe web scanners. Baseline: ModSecurity, un web application firewall. Rezultat: 70% dintre atacurile SQLi ratate de ModSecurity au fost detectate.",
+        "use": "Îți e util în state of the art ca exemplu de anomaly detection nesupervizat pe metadate de flow, combinat cu o a doua sursă de confirmare, ceea ce seamănă cu ideea ta de anomaly detection plus reguli. Verifică în textul complet ce algoritm nesupervizat folosesc pe NetFlow, ce features și ce rată de alarme false rezultă. Atenție: ținta e SQLi, nu DoS lent, deci ia doar ideea de arhitectură, nu rezultatele.",
+        "action": "skim",
+        "concept": {
+          "name": "Locality Sensitive Hashing (LSH)",
+          "explanation": "LSH este o metodă de a găsi rapid elemente asemănătoare fără să compari fiecare pereche. Funcțiile de hash sunt alese astfel încât elementele similare să ajungă probabil în același bucket, ca niște cărți sortate pe rafturi după temă. Aici, o linie de log suspectă se caută doar printre cele din același bucket, ceea ce face căutarea de similaritate rapidă pe loguri mari. Așa confirmă sistemul că un flow anormal corespunde unui atac real."
+        },
+        "terms": [
+          {
+            "term": "NetFlow",
+            "meaning": "Un rezumat al unei conexiuni de rețea (adrese, porturi, număr de pachete și octeți, durată), fără conținutul pachetelor."
+          },
+          {
+            "term": "TLS-interception proxy",
+            "meaning": "Un proxy care decriptează traficul HTTPS pentru inspecție, dar creează riscuri de securitate și scurgeri de date."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2611.23761",
+      "url": "https://arxiv.org/abs/2611.23761",
+      "title": "When Normal-Only Updates Are Not Enough: Test-Time Adaptation in Reconstruction-Based Time-Series Anomaly Detection",
+      "authors": [
+        "Jianhuan Mao",
+        "Mengxiao Zhu",
+        "Yue Pei",
+        "Lei Li",
+        "Haogang Zhu"
+      ],
+      "published": "2026-11-18",
+      "categories": [
+        "cs.LG"
+      ],
+      "abstract": "Normal operating conditions can evolve after deployment, motivating test-time adaptation (TTA) of time-series anomaly detectors using incoming data. Yet the same stream may contain anomalies, so TTA with online updates must decide which test samples should be used for adaptation. This leaves a more basic question: even if updates are restricted to samples labeled as normal in the benchmark, does TTA reliably improve anomaly detection? We study this question with a controlled intervention that replaces the practical update selector with a rule that uses only samples labeled as normal in the benchmark, while keeping the rest of the online adaptation procedure unchanged. Across nine benchmark families, four optimizer configurations, and five random seeds, we obtain three main findings: (1) using only samples labeled as normal in the benchmark does not reliably improve detection; (2) practical TTA failures exhibit two distinct responses to this intervention, with 63 of 180 settings recovering a clear detection gain while 90 still show no clear detection gain; and (3) the updates reduce their immediate reconstruction objective across the evaluated settings, yet these reductions do not consistently lead to better anomaly ranking. Both failure patterns persist across alternative practical adaptation variants and modest perturbations of the benchmark labels. Together, these findings show that improving sample selection alone is not a complete solution to reconstruction-based TSAD TTA.",
+      "added": "2026-11-21",
+      "seed": false,
+      "tier": "thesis",
+      "score": 6,
+      "reason": "Careful study of unsupervised reconstruction-based time-series anomaly detection and whether adaptation helps, which bears on the thesis's evaluation and unsupervised detector methodology, though it is not network-specific.",
+      "card": {
+        "summary": "Autorii studiază dacă test-time adaptation (TTA) ajută detectoarele de anomalii în serii de timp bazate pe reconstrucție. Ei înlocuiesc selectorul practic de eșantioane cu o regulă ideală, care folosește doar eșantioanele etichetate normale în benchmark. Pe nouă familii de benchmark-uri, patru configurații de optimizer și cinci seed-uri, rezultă că nici așa detecția nu se îmbunătățește sigur: 63 din 180 de setări recuperează un câștig clar, iar 90 nu arată niciunul.",
+        "evaluation": "Nouă familii de benchmark-uri pentru time-series anomaly detection, patru configurații de optimizer, cinci random seeds (180 de setări). Rezultatele sunt verificate și pe variante alternative de adaptare și pe perturbări ușoare ale etichetelor.",
+        "use": "Îți arată că un detector nesupravegheat adaptat pe date noi poate scădea eroarea de reconstrucție fără să ordoneze mai bine anomaliile. Poți folosi asta în capitolul de metodologie, ca argument pentru a evalua riguros orice adaptare și pentru a nu adapta modelele din baseline-uri. Verifică în textul complet cum e definit câștigul de detecție și ce metrică de ranking folosesc, pentru că tu măsori timpul până la detecție și alarmele false pe oră.",
+        "action": "skim",
+        "concept": {
+          "name": "Test-time adaptation (TTA) pe reconstrucție",
+          "explanation": "Un detector bazat pe reconstrucție învață să refacă datele normale, iar o eroare mare de reconstrucție semnalează o anomalie. TTA îl reantrenează puțin pe datele care sosesc după deployment, ca să țină pasul cu schimbarea condițiilor normale. E ca un paznic care își actualizează ideea de „normal” după fiecare tură. Riscul e dublu: dacă învață din anomalii, le consideră normale, iar chiar și cu date curate, o eroare de reconstrucție mai mică nu înseamnă neapărat o separare mai bună a anomaliilor."
+        },
+        "terms": [
+          {
+            "term": "anomaly ranking",
+            "meaning": "Ordonarea eșantioanelor după scorul de anomalie, astfel încât cele cu adevărat anormale să fie în fruntea listei."
+          },
+          {
+            "term": "sample selector",
+            "meaning": "Regula care decide ce eșantioane din fluxul de test sunt folosite la actualizarea modelului."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2611.26601",
+      "url": "https://arxiv.org/abs/2611.26601",
+      "title": "SoK: Assessing the Evolution of LLM Capability in Software Vulnerability Research",
+      "authors": [
+        "Amine Lbath",
+        "Manan Suri",
+        "Aurelien Delaitre",
+        "Vadim Okun",
+        "Massih-Reza Amini",
+        "Dinesh Manocha"
+      ],
+      "published": "2026-11-19",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "abstract": "LLM-based agents are becoming increasingly capable at discovering, validating and patching vulnerabilities in real software, and vendors and researchers report that this is already changing how vulnerabilities are found and fixed. These claims, however, are scattered across papers, vendor reports and disclosures and are rarely comparable. We introduce a framework that rates these capabilities on an autonomy scale modeled on the levels of driving automation, and qualifies each claim by its correctness, its availability and the strength of its evidence. We use this framework to systematize the published evidence on LLM capability in vulnerability research. We find that agents discovered, validated, and patched vulnerabilities in real-world software without human intervention before the restricted frontier models of 2026, and that open-weight models subsequently attained comparable autonomy for discovery and validation. We then measure the consequences of evolving LLM security capabilities in a decade of public vulnerability records, advisories and exploitation data. In 2026 the number of disclosed vulnerabilities more than doubled, with an increasing share rated critical or high, and severe bugs that had survived a decade or more in widely used code were reported several times more often than before. Yet the time between the stages of a vulnerability's life, from report to fix and from disclosure to attack, has not shifted noticeably so far. We grade the mitigations proposed in the literature with an explicit rubric and draw guidance for each group of stakeholders from the best-supported ones.",
+      "added": "2026-11-21",
+      "seed": false,
+      "tier": "field",
+      "score": 6,
+      "reason": "A systematization and measurement study of LLM vulnerability research and disclosure trends, useful for defensive practitioners but not directly about network traffic anomaly detection or detector evaluation.",
+      "card": {
+        "summary": "Autorii propun un cadru care evaluează capabilitățile LLM în cercetarea vulnerabilităților pe o scală de autonomie, inspirată de nivelurile de conducere autonomă. Fiecare afirmație este calificată prin corectitudine, disponibilitate și puterea dovezilor. Ei găsesc că agenții descopereau, validau și reparau vulnerabilități fără intervenție umană înainte de 2026, iar modelele open-weight au ajuns apoi la o autonomie comparabilă. În 2026, numărul vulnerabilităților divulgate a crescut de peste două ori, dar timpii dintre etapele vieții unei vulnerabilități nu s-au schimbat vizibil.",
+        "evaluation": "Analiza folosește zece ani de înregistrări publice de vulnerabilități, advisories și date despre exploatare. Cadrul propus este aplicat pe dovezile publicate în articole, rapoarte ale vendorilor și divulgări. Mitigările din literatură sunt notate cu o rubrică explicită.",
+        "use": "Nu este despre detecția anomaliilor în trafic, deci nu intră în capitolele centrale ale tezei. Îl poți cita în introducere sau în extensia cu agent LLM, ca să arăți că atacatorii și apărătorii folosesc tot mai mult LLM-uri. Verifică în textul complet cum e definită scala de autonomie și ce surse de date folosesc pentru creșterea din 2026.",
+        "action": "note",
+        "concept": {
+          "name": "Scală de autonomie (analogie cu nivelurile de conducere automată)",
+          "explanation": "Gândește-te la nivelurile mașinilor autonome: de la asistență la volan până la condus complet fără șofer. Aici ideea este aceeași, dar pentru agenții care caută vulnerabilități: cât din muncă face agentul singur și cât omul. Contează pentru că afirmațiile din rapoarte devin comparabile, în loc să sune vag, de tipul „AI-ul găsește bug-uri”. La fel poți descrie și cât de autonom e un agent LLM care propune reguli de blocare."
+        },
+        "terms": [
+          {
+            "term": "SoK (Systematization of Knowledge)",
+            "meaning": "Un tip de articol care adună și organizează dovezile existente dintr-un domeniu, în loc să propună o metodă nouă."
+          },
+          {
+            "term": "open-weight models",
+            "meaning": "Modele ale căror ponderi sunt publice, deci pot fi rulate și modificate local, spre deosebire de modelele accesibile doar prin API."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2611.23660",
+      "url": "https://arxiv.org/abs/2611.23660",
+      "title": "Protecting Web Applications using a Multimodal AI-based System for Classifying Web Injection Attacks",
+      "authors": [
+        "Rodrigo Branco",
+        "Vinicius Cogo",
+        "Ibéria Medeiros"
+      ],
+      "published": "2026-11-18",
+      "categories": [
+        "cs.CR"
+      ],
+      "abstract": "Web applications have been essential to accessing and managing online services. Made available with weaknesses, much due to their rapid development and human error, they are exposed to frequent web injection attacks, leaving security analysts overwhelmed with threats and alerts that often lack critical details for proper risk assessment. Detecting these attacks requires inspecting the payload of network traffic packets, which becomes inaccessible when traffic is encrypted via HTTPS, as encryption hides the content of the traffic. This paper introduces a Multimodal Artificial Intelligence (AI) system to protect online services that rely on web application security by detecting and classifying web injection attacks, and provides security analysts with information to support attack prevention and incident response. The system employs unsupervised Machine Learning (ML) to flag potentially anomalous Network Flows (NetFlows). The corresponding data recorded in Web Server Logs (WebLogs) is then analysed using a heuristic framework based on Natural Language Processing (NLP) and supervised ML to detect and classify web injection attacks. Finally, the resulting classifications are scrutinised using a Similarity Search Engine (SSE) based on Locality Sensitive Hashing (LSH) to validate them. The solution handles encrypted traffic by analysing NetFlows and WebLogs, the latter in their natural, unencrypted form, by leveraging NetFlow-level metadata for anomaly detection and analysing web server logs after TLS termination, thereby avoiding any additional in-network traffic decryption. It was evaluated in the classification of eight web injection attack classes. The results demonstrated its ability to accurately identify attacks and their classes, achieving an F_1 score of 91% and an accuracy of 95%, and offering valuable insights for alert prioritisation.",
+      "added": "2026-11-21",
+      "seed": false,
+      "tier": "field",
+      "score": 6,
+      "reason": "Defensive ML for web injection detection using NetFlow anomaly detection and web server logs fits practitioner SOC and network defense interests, but it falls outside the thesis's DoS and slow-attack focus.",
+      "card": {
+        "summary": "Autorii propun un sistem multimodal care detectează și clasifică atacuri de tip web injection fără să decripteze traficul HTTPS. Mai întâi un model de ML nesupervizat marchează NetFlow-uri anormale, apoi WebLogs corespunzătoare sunt analizate cu NLP și ML supervizat, iar clasificările sunt validate cu un Similarity Search Engine bazat pe LSH. Pe opt clase de atacuri obțin F1 de 91% și acuratețe de 95%.",
+        "evaluation": "Evaluarea este făcută pe clasificarea a opt clase de atacuri web injection. Metricile raportate sunt F1 (91%) și acuratețea (95%).",
+        "use": "Nu ține de DoS lent, deci e doar context pentru capitolul de state of the art sau pentru extensia cu explicarea alertelor. Merită reținută ideea de a folosi metadate NetFlow pentru detecția de anomalii și apoi un al doilea nivel care îmbogățește alerta. În textul complet verifică ce model nesupervizat folosesc pe NetFlow, ce date au folosit și dacă raportează false alarms pe oră sau timp până la detecție.",
+        "action": "note",
+        "concept": {
+          "name": "Locality Sensitive Hashing (LSH)",
+          "explanation": "LSH este o metodă de hashing făcută ca elementele asemănătoare să ajungă cel mai probabil în același coș, spre deosebire de hashing-ul obișnuit, unde o mică schimbare dă un hash complet diferit. Seamănă cu a sorta poze pe rafturi după aspect: ca să găsești una similară, cauți doar pe raftul ei, nu în toată colecția. Aici permite căutarea rapidă a cererilor web asemănătoare cu cele deja clasificate, pentru a valida o clasificare."
+        },
+        "terms": [
+          {
+            "term": "NetFlow",
+            "meaning": "Rezumat al unei conexiuni de rețea (adrese, porturi, număr de pachete și octeți, durată), fără conținutul pachetelor."
+          },
+          {
+            "term": "TLS termination",
+            "meaning": "Punctul în care traficul HTTPS este decriptat, de obicei la un proxy sau la serverul web, astfel încât logurile conțin cererile în clar."
+          }
+        ]
+      }
+    },
     {
       "id": "2205.07109",
       "url": "https://arxiv.org/abs/2205.07109",
